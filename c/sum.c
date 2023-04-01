@@ -1,12 +1,29 @@
 #include <stdio.h>
 
 int main() {
-  int n;
-  double x;
-  x = 10.45;
-  n = (int) x;
+    int a;
 
-  printf("Value of n is %d\n", n);
-  printf("Value of x is %.2lf\n", x);
-  return 0;
+    a = 1000;
+    printf("Value of a is %d\n", a);
+
+    a = -21000;
+    printf("Value of a is %d\n", a);
+
+    a = 10000000;
+    printf("Value of a is %d\n", a);
+
+    a = -10000000;
+    printf("Value of a is %d\n", a);
+
+    a = 2222222222;
+    printf("Value of a is %d\n", a);
+
+
+    a = 100020004000503;
+    printf("Value of a is %d\n", a);
+
+    a = -4325987632;
+    printf("Value of a is %d\n", a);
+
+    return 0;
 }
