@@ -1,13 +1,12 @@
-// #include <stdio.h>
+#include <stdio.h>
 
-// int main() {
-//   int a, b, sum = a + b;
+int main() {
+  int n;
+  double x;
+  x = 10.45;
+  n = (int) x;
 
-//   b = 600;
-//   a = 50;
-//   // sum = a + b;
-
-//   printf("Sum is %d", sum);
-
-//   return 0;
-// }
+  printf("Value of n is %d\n", n);
+  printf("Value of x is %.2lf\n", x);
+  return 0;
+}
