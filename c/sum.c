@@ -1,29 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int a;
+    double a = 10.1, b = 2.147, sum;
 
-    a = 1000;
-    printf("Value of a is %d\n", a);
+    sum = a + b;
 
-    a = -21000;
-    printf("Value of a is %d\n", a);
-
-    a = 10000000;
-    printf("Value of a is %d\n", a);
-
-    a = -10000000;
-    printf("Value of a is %d\n", a);
-
-    a = 2222222222;
-    printf("Value of a is %d\n", a);
-
-
-    a = 100020004000503;
-    printf("Value of a is %d\n", a);
-
-    a = -4325987632;
-    printf("Value of a is %d\n", a);
-
+    printf("Summation is = %lf\n", sum);
+    printf("Summation is = %0.2lf\n", sum);
+    printf("Summation is = %0.0lf\n", sum);
     return 0;
 }
