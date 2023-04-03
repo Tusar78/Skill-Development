@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int a, b, sum;
+    char ch;
 
-    scanf("%d %d", &a, b);
-
-    sum = a + b;
-
-    printf("Sum is: %d\n", sum);
+    printf("Enter the first letter of your name: ");
+    scanf("%c", &ch);
+    printf("The first letter of your name is: %c\n", ch);
 
     return 0;
 }
