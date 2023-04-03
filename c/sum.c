@@ -1,11 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    char ch;
+    int num1, num2;
 
-    printf("Enter the first letter of your name: ");
-    scanf("%c", &ch);
-    printf("The first letter of your name is: %c\n", ch);
+    printf("Please Enter a Number: ");
+    scanf("%d", &num1);
+    printf("Please Enter another Number: ");
+    scanf("%d", &num2);
 
+    printf("%d + %d = %d\n", num1, num2, num1 + num2);
+    printf("%d - %d = %d\n", num1, num2, num1 - num2);
+    printf("%d * %d = %d\n", num1, num2, num1 * num2);
+    printf("%d / %d = %d\n", num1, num2, num1 / num2);
     return 0;
 }
