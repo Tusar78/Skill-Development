@@ -25,5 +25,8 @@ int main() {
     sign = '/';
     printf("%lf %c %lf = %0.2lf\n", num1, sign, num2, value);
 
+    int (4)T = 10;
+    printf("%d", 4T);
+
     return 0;
 }
