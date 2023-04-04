@@ -3,15 +3,12 @@
 int main()
  {
      int n;
-     n = -10;
-     if(n<0) {
-        printf("This number is Negative\n");
+     n = 10;
+     if(n < 30) {
+        printf("This number is less then 30\n");
      }
-     if (n > 0) {
-       printf("This number is Positive\n");
-     }
-     if (n == 0) {
-       printf("This number is Zero\n");
+     else if (n < 50) {
+       printf("This number is less then 50\n");
      }
      return 0;
  }
