@@ -25,3 +25,14 @@
 // }
 
 // console.log(letVariable);
+
+// var tester = "Say hi";
+
+// function myFunc() {
+//   var hello = "Hello World";
+// }
+
+// console.log(hello);
+
+// console.log(hello);
+// var hello = 'Rakib';
