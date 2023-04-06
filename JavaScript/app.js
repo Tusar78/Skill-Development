@@ -36,3 +36,19 @@
 
 // console.log(hello);
 // var hello = 'Rakib';
+
+// let greeting = "say Hi";
+// let times = 4;
+
+// if (times > 3) {
+//   let hello = "Say Hello Instead";
+//   console.log(hello);
+// }
+
+// console.log(hello);
+
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+// console.log(i);
