@@ -52,3 +52,15 @@
 // }
 
 // console.log(i);
+
+function sayHiBye(fName, lName) {
+  function fullName() {
+    return fName + " " + lName;
+  }
+
+  alert("Hello " + fullName());
+  alert("Hi " + fullName());
+}
+
+sayHiBye("Rakibul", "Islam");
+sayHiBye("Tusar", "Ali");
