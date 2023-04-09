@@ -53,14 +53,53 @@
 
 // console.log(i);
 
-function sayHiBye(fName, lName) {
-  function fullName() {
-    return fName + " " + lName;
-  }
+// function sayHiBye(fName, lName) {
+//   function fullName() {
+//     return fName + " " + lName;
+//   }
 
-  alert("Hello " + fullName());
-  alert("Hi " + fullName());
-}
+//   alert("Hello " + fullName());
+//   alert("Hi " + fullName());
+// }
 
-sayHiBye("Rakibul", "Islam");
-sayHiBye("Tusar", "Ali");
+// sayHiBye("Rakibul", "Islam");
+// sayHiBye("Tusar", "Ali");
+
+// function makeCounter() {
+//   let rndm = Math.ceil(Math.random() * 10);
+
+//   return function () {
+//     return rndm*Math.ceil(Math.random());
+//   }
+// }
+
+// const result = makeCounter();
+
+// console.log(result());
+// console.log(result());
+// console.log(result());
+
+// (function () {
+//   let num1 = 10;
+
+//   var sum = function () {
+//     let num2 = 20;
+//     let num3 = 6;
+//     return function () {
+//       return num1;
+//     };
+//   };
+
+//   var myFunc = sum();
+//   console.dir(myFunc);
+// })();
+
+// var num1 = 10;
+// var num2 = 20;
+
+// var sum = function() {
+//   return num1 + num2;
+// }
+
+// console.dir(sum);
+
