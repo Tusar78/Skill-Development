@@ -103,3 +103,30 @@
 
 // console.dir(sum);
 
+function stopWatch() {
+  let startTime = Date.now();
+
+  function getDelay() {
+    console.log(Date.now() - startTime);
+  }
+
+  return getDelay; 
+}
+
+let timer = stopWatch();
+
+for (let i = 0; i < 10000000; i++) {
+  const element = Math.random() * 1000000;
+}
+
+timer()
+
+timer = null;
+timer()
+console.dir(timer)
+
+
+let tus = 'Tusar';
+console.log(tus);
+tus = null;
+console.log(tus);
