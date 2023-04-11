@@ -103,30 +103,47 @@
 
 // console.dir(sum);
 
-function stopWatch() {
-  let startTime = Date.now();
+// function stopWatch() {
+//   let startTime = Date.now();
 
-  function getDelay() {
-    console.log(Date.now() - startTime);
+//   function getDelay() {
+//     console.log(Date.now() - startTime);
+//   }
+
+//   return getDelay; 
+// }
+
+// let timer = stopWatch();
+
+// for (let i = 0; i < 10000000; i++) {
+//   const element = Math.random() * 1000000;
+// }
+
+// timer()
+
+// timer = null;
+// timer()
+// console.dir(timer)
+
+
+// let tus = 'Tusar';
+// console.log(tus);
+// tus = null;
+// console.log(tus);
+
+var a;
+
+function async() {
+  a = 20;
+
+  var myFunc = function() {
+    console.log(a);
   }
 
-  return getDelay; 
+  setTimeout(myFunc, 3000);
+  console.dir(myFunc);
 }
 
-let timer = stopWatch();
+async();
 
-for (let i = 0; i < 10000000; i++) {
-  const element = Math.random() * 1000000;
-}
-
-timer()
-
-timer = null;
-timer()
-console.dir(timer)
-
-
-let tus = 'Tusar';
-console.log(tus);
-tus = null;
-console.log(tus);
+a = 30;

@@ -31,5 +31,4 @@ int main()
     } else {
         printf("The number is Even");
     }
-
  }
