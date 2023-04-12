@@ -71,5 +71,4 @@ int main() {
     } else {
         printf("This is Even Number!");
     }
-
 }
