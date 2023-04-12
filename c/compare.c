@@ -30,6 +30,7 @@ int main() {
 #include <stdio.h>
 
 int main() {
+    /*
     char ch;
 
     printf("Enter your favorite character: ");
@@ -39,5 +40,14 @@ int main() {
         printf("%c is Lower case \n", ch);
     } else if (ch >= 'A' && ch <= 'Z') {
         printf("%c is Upper case \n", ch);
+    }
+    */
+
+    int num;
+    printf("Enter your favorite number: ");
+    scanf("%c", &num);
+
+    if(num >= 1 || num <= 10) {
+        printf("Condition Successfully!");
     }
 }
