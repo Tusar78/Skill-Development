@@ -131,19 +131,71 @@
 // tus = null;
 // console.log(tus);
 
-var a;
+// var a;
 
-function async() {
-  a = 20;
+// function async() {
+//   a = 20;
 
-  var myFunc = function() {
-    console.log(a);
+//   var myFunc = function() {
+//     console.log(a);
+//   }
+
+//   setTimeout(myFunc, 3000);
+//   console.dir(myFunc);
+// }
+
+// async();
+
+// a = 30;
+
+
+// const myFunc = url => {
+//   fetch(url).then(res => res.json()).then(data => console.log(data))
+//   }
+
+// myFunc("https://jsonplaceholder.typicode.com/todos/1")
+
+// for (let i = 0; i < 3; i++) {
+//   const myFunc = () => {
+//     console.log(i);
+//   }
+//   console.log(i);
+//   console.dir(myFunc)
+//   setTimeout(myFunc, 3000);
+// }
+
+// let phrase = 'Tusar';
+
+// const myFunc = function() {
+//   return function() {
+//     return phrase;
+//   }
+// }
+
+// const anotherFunc = myFunc();
+// console.dir(anotherFunc)
+
+function makeCounter() {
+  let count = 5;
+  function myFunc () {
+    count = 10;
+    console.log(count);
   }
-
-  setTimeout(myFunc, 3000);
-  console.dir(myFunc);
+  console.log(count);
+  console.dir(myFunc)
+  return myFunc; 
 }
 
-async();
+let counter = makeCounter();
 
-a = 30;
+counter()
+counter()
+counter()
+
+let x = 10;
+function myNewFunc() {
+  x = 30;
+  return x;
+}
+
+console.log(x);
