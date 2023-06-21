@@ -1,6 +1,33 @@
 #include<stdio.h>
 
 int main() {
+	char upper, lower;
+
+	printf("Type any Uppercase Letter: ");
+	scanf("%c", &upper);
+
+	lower = tolower(upper);
+
+	printf("Your lowercase Letter is: %c", lower);
+}
+
+/*
+
+int main() {
+    char lower, upper;
+
+    printf("Type any lowercase letter: ");
+    scanf("%c", &lower);
+
+    upper = toupper(lower);
+
+    printf("Your UPPERCASE letter is: %c", upper);
+
+    getch();
+    return 0;
+}
+
+int main() {
     char name;
     int toLowerCase;
 
@@ -13,7 +40,7 @@ int main() {
     getch();
 }
 
-/*
+
 int main() {
     char name;
     int toUpperCase;
