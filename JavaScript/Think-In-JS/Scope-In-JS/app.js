@@ -70,20 +70,28 @@ sayHi("Tusar", "Rakib")
 // console.log(account);
 // console.dir(account);
 
+// var num1 = 3;
+// var num2 = 4;
 
-  var num1 = 3;
-  var num2 = 4;
+// function sum() {
+//   return num1 + num2;
+// }
 
-  function sum() {
-    return num1 + num2;
-  }
+// console.log(sum());
+// console.dir(sum);
 
-  console.log(sum());
-  console.dir(sum);
+// num1 = 10;
+// num2 = 20;
 
-  num1 = 10;
-  num2 = 20;
+// console.log(sum());
+// console.dir(sum);
 
-  console.log(sum());
-  console.dir(sum);
+  // let num1 = 5;
+  // let num2 = 10;
 
+  // function sum() {
+  //   return num1 + num2;
+  // }
+
+  // console.log(sum());
+  // console.dir(sum);
