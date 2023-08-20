@@ -116,17 +116,18 @@ sayHi("Tusar", "Rakib")
 // timer();
 // timer = null; // Garbage Collection
 
-var a = 10;
+// var a = 10;
 
-function async() {
-  function innerAsync() {
-    console.log(a);
-  }
+// function async() {
+//   function innerAsync() {
+//     console.log(a);
+//   }
 
-  setTimeout(innerAsync, 3000);
-  console.dir(innerAsync);
-  }
+//   setTimeout(innerAsync, 3000);
+//   console.dir(innerAsync);
+//   }
 
-async()
+// async()
 
-a = 20
+// a = 20
+
