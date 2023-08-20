@@ -57,13 +57,16 @@ sayHi("Tusar", "Rakib")
 // console.log(myFunc);
 // console.dir(myFunc);
 
-function backAccount(initialBalance) {
-  var balance = initialBalance;
-  return function () {
-    return 'tusar';
-  }
-}
+// const myName = 'Tusar';
 
-var account = backAccount(10000);
-console.log(account);
-console.dir(account);
+// function backAccount(initialBalance) {
+//   const balance = initialBalance;
+//   return function () {
+//     return balance;
+//   }
+// }
+
+// var account = backAccount(10000);
+// console.log(account);
+// console.dir(account);
+
