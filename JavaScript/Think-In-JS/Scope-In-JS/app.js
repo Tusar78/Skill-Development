@@ -1,13 +1,12 @@
+// var x;
 
-var x;
+// function myFunc() {
+//   x = 10;
+//   console.log(x);
+// }
 
-function myFunc() {
-  x = 10;
-  console.log(x);
-}
-
-myFunc();
-console.log(x);
+// myFunc();
+// console.log(x);
 
 //nested Function
 
@@ -45,10 +44,26 @@ sayHi("Tusar", "Rakib")
 
 // myFun();
 
-var num1 = 10;
-var num2 = 20;
-var sum = function () {
-  return num1 + num2;
+// var num1 = 10;
+// var sum = function () {
+//   var num2 = 20;
+
+//   return function () {
+//     return num1 + num2;
+//   };
+// };
+
+// var myFunc = sum();
+// console.log(myFunc);
+// console.dir(myFunc);
+
+function backAccount(initialBalance) {
+  var balance = initialBalance;
+  return function () {
+    return 'tusar';
+  }
 }
 
-console.dir(sum);
+var account = backAccount(10000);
+console.log(account);
+console.dir(account);
