@@ -95,3 +95,23 @@ sayHi("Tusar", "Rakib")
 
   // console.log(sum());
   // console.dir(sum);
+
+
+// function stopWatch() {
+//   var startTime = Date.now();
+
+//   function delay() {
+//     console.log(Date.now() - startTime);
+//   }
+
+//   return delay;
+// }
+
+// var timer = stopWatch();
+
+// for (let i = 0; i < 100000000; i++){
+//   var a = Math.random() * 100000000;
+// };
+
+// timer();
+// timer = null; // Garbage Collection
