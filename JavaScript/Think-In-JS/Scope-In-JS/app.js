@@ -131,3 +131,31 @@ sayHi("Tusar", "Rakib")
 
 // a = 20
 
+// for (let i = 0; i < 3; i++) {
+//   function myFunc() {
+//     console.log(i);
+//   }
+//   setInterval(myFunc, 3000);  
+//   console.dir(myFunc);
+// }
+
+// {
+//   let message = 'Hello';
+//   alert(message);
+// }
+
+// let message = 'Goodbye';
+// alert(message);
+
+// if (true) {
+//   let message = 'Awesome';
+//   alert(message)
+// }
+
+// alert(message)
+
+// for(var i = 0; i < 3; i++) {
+//   console.log(i);
+// }
+
+// console.log(i);
