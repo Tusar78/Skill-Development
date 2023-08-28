@@ -1,41 +1,28 @@
 #include<stdio.h>
 
+int linearSearch(int arr[], int n, int elem) {
+    int found = -1;
+    for(int i = 0; i < n; i++) {
+        if(elem == arr[i]) {
+            return found = i;
+            break;
+        }
+    }
+
+    return found;
+}
+
 int main() {
     int x[] = {5, 7, 9, 2, 3};
     int n = sizeof(x) / sizeof(x[0]);
     int k;
 
-    printf("Enter your desire number: ");
+    printf("Enter your search number: ");
     scanf("%d", &k);
 
-    printf("\n");
+    int result = linearSearch(x, n, k);
 
-    int found = 0;
+    printf("%d", result);
 
-    /*
-    for(int i = 0; i < n; i++) {
-        if(k == x[i]) {
-            printf("Your Search Number Position is: %d", i);
-
-            found++;
-            break;
-        }
-    }*/
-
-    int i = 0;
-    while(i < n) {
-
-        if(k == x[i]) {
-            printf("Your Search Number Position is: %d", i);
-
-            found++;
-            break;
-        }
-        i++;
-    }
-
-    if(found == 0) {
-        printf("Your Search Number is Not Found");
-    }
     getch();
 }
