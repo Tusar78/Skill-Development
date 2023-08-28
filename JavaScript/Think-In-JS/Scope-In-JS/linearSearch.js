@@ -15,3 +15,5 @@ const linearSearch = (arr, elem) => {
 }
 
 const result = linearSearch(x, k);
+
+result == -1 ? console.log("Data is not found") : console.log(`Number position is ${result}`);
