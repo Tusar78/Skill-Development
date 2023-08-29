@@ -8,7 +8,9 @@ const linearSearch = (arr, elem) => {
     if (arr[i] == elem) {
       found = i;
       break;
-    }    
+    } else {
+      console.log("Hello");
+    }
   }
 
   return found;
