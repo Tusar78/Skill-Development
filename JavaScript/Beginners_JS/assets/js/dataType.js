@@ -36,3 +36,14 @@
 let value = true;
 value = String(value)
 console.log(typeof value);
+
+console.log('10'/ '2');
+console.log('10');
+
+let num1 = '326478';
+console.log(typeof num1);
+
+// num1 = Number(num1);
+num1 = +num1;
+
+console.log(num1);
