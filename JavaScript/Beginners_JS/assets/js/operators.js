@@ -35,3 +35,19 @@
 // let counter = 1;
 // let result = ++counter;
 // console.log(result);
+
+// let a = (1+2, 2+3);
+// console.log(a);
+console.log("" - 1 + 0);
+console.log(true + false);
+console.log("4px" - 2);
+console.log("  -9  " + 5);
+console.log("  -9  " - 5);
+console.log(null + 1);
+console.log(undefined + 1);
+console.log(" \t \n" - 2);
+
+// let a = prompt("First number?", 1);
+// let b = prompt("Second number?", 2);
+
+// alert(+a + +b); // 12
