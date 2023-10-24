@@ -31,3 +31,20 @@
 // console.log(isFinite(2465));
 // console.log(NaN == NaN);
 
+// let num = '124';
+// console.log(Number.parseInt(num, 16));
+
+// const num1 = prompt("Enter first number: ", "");
+// const num2 = prompt("Enter second number: ", "");
+
+// let sum = Number.parseFloat(num1) + Number.parseFloat(num2);
+// console.log(sum + 'Px');
+
+function randomInteger(min, max) {
+  let rand = min - 0.5 + Math.random() * (max - min + 1);
+  //         3 - 0.5 + 0.75 * (5 - 3 + 1)
+  return Math.round(rand);
+}
+
+const randm = randomInteger(3, 5);
+console.log(randm);
