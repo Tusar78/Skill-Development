@@ -2,16 +2,13 @@
 
 int main()
  {
-    char ch;
+    int i = 1;
 
-    printf("Enter your character: ");
-    scanf("%c", &ch);
+    tusar:
+        printf("%d\t", i);
+        i++;
 
-    if(ch >= 'a' && ch <= 'z') {
-        printf("This is lowercase letter!");
-    } else if (ch >= 'A' && ch <= 'Z') {
-        printf("This is uppercase letter!");
-    } else {
-        printf("This is special Character");
+    if(i < 5) {
+        goto tusar;
     }
  }
