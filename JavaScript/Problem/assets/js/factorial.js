@@ -13,3 +13,12 @@ const getFactorial = f => {
 
 const fact = getFactorial(num);
 alert(fact);
+
+
+// let fact2 = 0;
+// let n = 4;
+// for (let i = 1; i <= n; i++) {
+//     fact2 = fact2 + (n * (n-i));
+// }
+
+// console.log(fact2);
