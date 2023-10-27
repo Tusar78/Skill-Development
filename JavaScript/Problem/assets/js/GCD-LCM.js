@@ -19,5 +19,7 @@ const getGCD = (num1, num2) => {
   return [gcd, lcm];
 }
 
-let getGCDorLCM = getGCD(num1, num2);
-console.log(getGCDorLCM);
+let [gcd, lcm] = getGCD(num1, num2);
+console.log(`Two numbers are: ${num1} ${num2}`);
+console.log(`Greatest Common Divisor = ${gcd}`);
+console.log(`Least Common Multiplication = ${lcm}`);
