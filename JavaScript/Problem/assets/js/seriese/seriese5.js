@@ -2,14 +2,18 @@
 
 let n = +prompt("Enter your number: ");
 
-const getSeries = n => {
-  let series = '';
+const getSeries = (n) => {
+  let series = "";
   for (let i = 1; i <= n; i++) {
-    series += (i ** 2) + ' ';
+    if (i == n) {
+      series += i ** 2;
+    } else {
+      series += i ** 2 + " + ";
+    }
   }
 
   return series;
-}
+};
 
 let series = getSeries(n);
 console.log(series);
