@@ -11,6 +11,7 @@ const getSeries = (n) => {
       series += i;
       sum += i;
     } else if (i % 2 != 0) {
+      
       series += " + " + i;
       sum += i;
     } else {
