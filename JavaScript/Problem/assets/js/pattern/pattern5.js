@@ -13,7 +13,7 @@ const patternFive = n => {
 
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= i ; j++) {
-      pattern += i + ' ';
+      pattern += String.fromCharCode(i+64) + ' ';
     }    
     pattern += "\n";
   }
@@ -22,3 +22,4 @@ const patternFive = n => {
 }
 
 const {pattern} = patternFive(n);
+console.log(pattern);
