@@ -8,12 +8,13 @@
 
 
 // Insert 2D Array
-let simpleMatrix = [[], [], []];
-for (let i = 0; i < 3; i++) {
-  for (let j = 0; j < 3; j++) {
-    let n = +prompt('Enter random number');
-    simpleMatrix[i][j] = n;
-  }  
-}
+// let simpleMatrix = [[], [], []];
+// for (let i = 0; i < 3; i++) {
+//   for (let j = 0; j < 3; j++) {
+//     let n = +prompt('Enter random number');
+//     simpleMatrix[i][j] = n;
+//   }  
+// }
 
-console.log(simpleMatrix);
+// console.log(simpleMatrix);
+
