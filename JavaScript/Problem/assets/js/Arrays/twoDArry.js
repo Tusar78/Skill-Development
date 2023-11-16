@@ -5,3 +5,4 @@ for (let i = 0; i <twoDArray.length; i++) {
     console.log(twoDArray[i][j]);
   }  
 }
+
