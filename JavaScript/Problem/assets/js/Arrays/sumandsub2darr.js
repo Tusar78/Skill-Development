@@ -11,4 +11,26 @@ for (let i = 0; i < row; i++) {
     matrixOne[i][j] = +prompt("Enter Your Value: ");
   }
 }
-console.log(arr);
+
+for (let i = 0; i < row; i++) {
+  matrixTwo[i] = [];
+  for (let j = 0; j < col; j++) {
+    matrixTwo[i][j] = +prompt("Enter Your Value: ");
+  }
+}
+
+
+const sumTwoMatrix = (m1, m2) => {
+  const resultMatrix = [];
+  for (let i = 0; i < m1.length; i++) {
+    resultMatrix[i] = [];
+    for (let j = 0; j < m1.length; j++) {
+      resultMatrix[i][j] = m1[i][j] + m2[i][j];      
+    }
+  }
+
+  return resultMatrix;
+}
+
+const resultMatrix = sumTwoMatrix(matrixOne, matrixTwo);
+console.log(resultMatrix);
