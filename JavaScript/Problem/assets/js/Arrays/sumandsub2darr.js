@@ -2,12 +2,13 @@
 const row = +prompt("Enter Row: ");
 const col = +prompt("Enter Column: ");
 
-const arr = [];
+const matrixOne = [];
+const matrixTwo = [];
 
 for (let i = 0; i < row; i++) {
-  arr[i] = [];
+  matrixOne[i] = [];
   for (let j = 0; j < col; j++) {
-    arr[i][j] = +prompt("Enter Your Value: ");
+    matrixOne[i][j] = +prompt("Enter Your Value: ");
   }
 }
 console.log(arr);
