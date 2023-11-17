@@ -25,7 +25,7 @@ const sumTwoMatrix = (m1, m2) => {
   for (let i = 0; i < m1.length; i++) {
     resultMatrix[i] = [];
     for (let j = 0; j < m1.length; j++) {
-      resultMatrix[i][j] = m1[i][j] + m2[i][j];      
+      resultMatrix[i][j] = m1[i][j] - m2[i][j];      
     }
   }
 
