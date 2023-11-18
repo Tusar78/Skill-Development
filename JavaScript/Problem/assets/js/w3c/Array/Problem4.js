@@ -7,7 +7,7 @@ let getSubArray = (arr, n = 1) => {
   let newArray = [];
   let initial = arr.length - n;
 
-  if (arr.length != 0) {
+  if (arr.length != 0 && n <= arr.length) {
     for (let i = initial; i < arr.length; i++) {
       newArray[i-initial] = arr[i];
     }
@@ -20,5 +20,5 @@ let getSubArray = (arr, n = 1) => {
   }
 };
 
-const result = getSubArray([], 4);
+const result = getSubArray(myArray, 4);
 console.log(result);
