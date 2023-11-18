@@ -3,13 +3,32 @@
 // Way 01 => Loop
 const myArray = [4, 7, 8, 9, 87];
 
+// let getSubArray = (arr, n = 1) => {
+//   let newArray = [];
+
+//   if (arr.length != 0) {
+//     for (let i = 0; i < n; i++) {
+//       newArray[i] = arr[i];
+//     }
+//   }
+
+//   if (newArray.length == 1) {
+//     return newArray[0];
+//   } else {
+//     return newArray;
+//   }
+// };
+
+// const result = getSubArray([], 3);
+// console.log(result);
+
+
+// Way 02 => using build in method
 let getSubArray = (arr, n = 1) => {
   let newArray = [];
 
   if (arr.length != 0) {
-    for (let i = 0; i < n; i++) {
-      newArray[i] = arr[i];
-    }
+    newArray = arr.slice(0, n);
   }
 
   if (newArray.length == 1) {
@@ -19,5 +38,5 @@ let getSubArray = (arr, n = 1) => {
   }
 };
 
-const result = getSubArray([], 3);
+const result = getSubArray(myArray);
 console.log(result);
