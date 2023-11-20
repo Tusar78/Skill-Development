@@ -109,3 +109,22 @@
 
 // const Tusar = new Person('Tusar', 24);
 // console.log(Tusar);
+
+class Person {
+  constructor(name, age) {
+    this.name = name,
+    this.age = age
+  }
+
+  eat() {
+    console.log('I am eating');
+  } 
+
+  sleep() {
+    console.log('I am sleeping!');
+  }
+}
+
+const Tusar = new Person('Tusar', 24);
+console.log(Person.prototype);
+
