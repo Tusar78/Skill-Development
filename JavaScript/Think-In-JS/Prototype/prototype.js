@@ -88,3 +88,24 @@
 
 // const Tusar = Person('Tusar', 24);
 // console.log(Tusar);
+
+// function Person(name, age) {
+//   // let this = person.create(Person.prototype);
+
+//   this.name = name;
+//   this.age = age;
+
+//   // return this;
+// }
+
+// Person.prototype = {
+//   eat() {
+//     console.log('I am eating!');
+//   },
+//   sleep() {
+//     console.log('I am Sleeping!');
+//   }
+// }
+
+// const Tusar = new Person('Tusar', 24);
+// console.log(Tusar);
