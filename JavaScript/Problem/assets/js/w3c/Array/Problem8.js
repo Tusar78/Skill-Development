@@ -4,27 +4,50 @@
   Sample Output : a ( 5 times )
  */
 
+const arr = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
 
-const arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// const newARr = [];
+// let max = 0;
+// let letter;
 
-const newARr = [];
-let max = 0; 
-let letter;
+// for (let i = 0; i < arr.length; i++) {
+//   let count = 0;
 
-for (let i = 0; i < arr.length; i++) {
-  let count = 0;
+//   for (let j = 0; j < arr.length; j++) {
+//     if (arr[i] == arr[j]) {
+//       count++;
+//     }
+//   }
 
-  for (let j = 0; j < arr.length; j++) {
-    if (arr[i] == arr[j]) {
-      count++;
+//   if (count > max) {
+//     max = count;
+//     letter = arr[i];
+//   }
+
+// }
+// console.log(max);
+// console.log(letter);
+
+// Precise Version
+const findRepeat = (arr) => {
+  let letter,
+    max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] == arr[j]) {
+        count++;
+      }
+    }
+
+    if (count > max) {
+      max = count;
+      letter = arr[i];
     }
   }
 
-  if (count > max) {
-    max = count;
-    letter = arr[i];
-  }
+  return { letter, max };
+};
 
-}
-console.log(max);
-console.log(letter);
+const {letter, max} = findRepeat(arr);
+console.log(`Letter '${letter}' Repeat ${max} Times`);
