@@ -51,3 +51,9 @@ const findRepeat = (arr) => {
 
 const {letter, max} = findRepeat(arr);
 console.log(`Letter '${letter}' Repeat ${max} Times`);
+
+
+// Repeat element delete system additional
+const mySet = new Set(arr);
+const newArr = [...mySet];
+console.log(newArr);
