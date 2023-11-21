@@ -118,7 +118,7 @@
 
 //   eat() {
 //     console.log('I am eating');
-//   } 
+//   }
 
 //   sleep() {
 //     console.log('I am sleeping!');
@@ -128,7 +128,6 @@
 // const Tusar = new Person('Tusar', 24);
 // console.log(Person.prototype);
 
-
 // const myArray = new Array();
 // myArray.push("Tusar");
 
@@ -136,3 +135,34 @@
 
 // Tusar.eat();
 
+// class Person {
+//   constructor(name, age) {
+//     this.name = name,
+//     this.age = age
+//   }
+
+//   sleep() {
+//     console.log(`${this.name} sleeping!`);
+//   }
+// }
+
+// const Tusar = new Person("Tusar", 24);
+// console.log(Tusar.sleep());
+
+function Person(name, age) {
+  const person = Object.create(Person.prototype);
+
+  person.name = name;
+  person.age = age;
+
+  return person;
+}
+
+Person.prototype = {
+  sleep() {
+    console.log(`${this.name} sleeping!`);
+  },
+};
+
+const Tusar = new Person("Tusar", 24);
+Tusar.sleep();
