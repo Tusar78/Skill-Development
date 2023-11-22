@@ -24,18 +24,21 @@ function Player(name, age, type, country) {
   this.type = type;
   this.country = country;
 }
-
 Person.prototype = {
   eat() {
-    console.log(`${name} can eat.`);
+    console.log(`${this.name} can eating!`);
   },
   sleep() {
-    console.log(`${name} can sleep`);
-  }
-}
+    console.log(`${this.name} can sleeping!`);
+  },
+};
 
 Player.prototype = Object.create(Person.prototype);
-Player.prototype.constructor = Player
+Player.prototype.constructor = Player;
 
-const Sakib = new Player('Sakib', 37, 'All rounder', 'BD');
-console.log(Sakib);
+Player.prototype.play = function () {
+  console.log(`${this.name} can playing!`);
+};
+
+const Sakib = new Player("Sakib", 24, "All Rounder", "BD");
+console.log(Sakib.eat());
