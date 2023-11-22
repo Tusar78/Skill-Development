@@ -43,33 +43,34 @@
 // const Sakib = new Player("Sakib", 24, "All Rounder", "BD");
 // console.log(Sakib.eat());
 
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  eat() {
-    console.log(`${this.name} can eat!`);
-  }
-  sleep() {
-    console.log(`${this.name} can sleep!`);
-  }
-}
+//   eat() {
+//     console.log(`${this.name} can eat!`);
+//   }
+//   sleep() {
+//     console.log(`${this.name} can sleep!`);
+//   }
+// }
 
-class Player extends Person{
-  constructor(name, age, type, country) {
-    super(name, age);
-    this.name = name;
-    this.age = age;
-    this.type = type;
-    this.country = country;
-  }
+// class Player extends Person{
+//   constructor(name, age, type, country) {
+//     super(name, age);
+//     this.name = name;
+//     this.age = age;
+//     this.type = type;
+//     this.country = country;
+//   }
 
-  play() {
-    console.log(`${this.name} can play!`);
-  }
-}
+//   play() {
+//     console.log(`${this.name} can play!`);
+//   }
+// }
 
-const Sakib = new Player('Sakib', 37, "All rounder", 'BD');
-console.log(Sakib);
+// const Sakib = new Player('Sakib', 37, "All rounder", 'BD');
+// console.log(Sakib);
+
