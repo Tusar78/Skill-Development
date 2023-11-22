@@ -98,7 +98,14 @@ class Phone extends Mobile {
   video() {
     console.log(`${this.name} can have 1080px video!`);
   }
+
+  get getFunc() {
+    console.log('Hello World');
+  }
   
+  set setFunc(name) {
+    this.name = name;
+  }
   // This method denote to this class not this constructor
   // static call() {
   //   console.log(`${this.name} can have calling feature!`);
@@ -109,7 +116,11 @@ class Phone extends Mobile {
   }
 }
 
-const Samsung = new Phone('Samsung', 'Gorilla', '12mp', '8gb');
-console.log(Samsung.call());
+const samsung = new Phone('Samsung', 'Gorilla', '12mp', '8gb');
+// console.log(Samsung.call());
 
 // Phone.call()
+
+samsung.getFunc
+samsung.setFunc = 'Hello';
+console.log(samsung.name)
