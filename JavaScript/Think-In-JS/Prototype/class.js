@@ -74,3 +74,42 @@
 // const Sakib = new Player('Sakib', 37, "All rounder", 'BD');
 // console.log(Sakib);
 
+// Getter and setter
+class Mobile {
+  constructor(camera, ram){
+    this.camera = camera;
+    this.ram = ram;
+  }
+
+  call() {
+    console.log(`${this.name} can have call`);
+  }
+}
+
+class Phone extends Mobile {
+  constructor(name, touch, camera, ram) {
+    super(camera, ram)
+    this.camera = camera;
+    this.ram = ram;
+    this.name = name;
+    this.touch = touch;
+  }
+
+  video() {
+    console.log(`${this.name} can have 1080px video!`);
+  }
+  
+  // This method denote to this class not this constructor
+  // static call() {
+  //   console.log(`${this.name} can have calling feature!`);
+  // }
+  call() {
+    super.call()
+    console.log(`${this.name} can have calling feature!`);
+  }
+}
+
+const Samsung = new Phone('Samsung', 'Gorilla', '12mp', '8gb');
+console.log(Samsung.call());
+
+// Phone.call()
