@@ -36,14 +36,16 @@
 // tamim.displayName();
 
 
-const myFunc = function () {
-  console.log(this.name);
-}
+// const myFunc = function (n1, n2) {
+//   console.log(this.name, n1, n2);
+// }
 
-const sakib = {
-  name : 'Sakib',
-  age : 37,
-}
+// const sakib = {
+//   name : 'Sakib',
+//   age : 37,
+// }
 
-myFunc.call(sakib);
-sakib.name
+// const arr = ['Tusar', 'Rakib']
+// // myFunc.apply(sakib, arr);
+// const m = myFunc.bind(sakib, ...arr);
+// m();
