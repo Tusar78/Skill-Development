@@ -49,3 +49,14 @@
 // // myFunc.apply(sakib, arr);
 // const m = myFunc.bind(sakib, ...arr);
 // m();
+
+
+function Person(name, age) {
+  console.log(this.name);
+}
+
+const Sakib = {
+  nameE: 'Sakib'
+}
+
+Person();
