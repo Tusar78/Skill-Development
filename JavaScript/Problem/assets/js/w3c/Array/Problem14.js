@@ -37,11 +37,22 @@ console.log(arr);
 // console.log(newArr);
 
 // Way 03 - Index Of
-const newArr = [];
+// const newArr = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (newArr.indexOf(arr[i]) == -1) {
+//     newArr.push(arr[i])
+//   }  
+// }
+
+// console.log(newArr);
+
+// Repeat Looping Way
 for (let i = 0; i < arr.length; i++) {
-  if (newArr.indexOf(arr[i]) == -1) {
-    newArr.push(arr[i])
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      arr.splice(j, 1);
+    }   
   }  
 }
 
-console.log(newArr);
+console.log(arr);
