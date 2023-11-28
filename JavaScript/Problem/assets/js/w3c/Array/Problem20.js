@@ -16,4 +16,3 @@ for (let i = 0; i < len; i++) {
 }
 
 console.log(array);
-console.log(duplicate);
