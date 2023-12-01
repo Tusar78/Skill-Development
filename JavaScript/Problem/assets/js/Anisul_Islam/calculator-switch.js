@@ -1,6 +1,6 @@
 // Write a program to make a calculator
 let firstNum = +prompt("Enter first number: ");
-let secondNum = +prompt("Enter second number: ");
+let secondNum = +prompt("Enter second num: ");
 
 let operation = prompt("Addition(+), Subtraction(-), Multiplication(*), Divide(/)");
 
