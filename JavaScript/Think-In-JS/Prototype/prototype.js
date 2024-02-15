@@ -178,15 +178,12 @@ const personMethod = {
 }
 
 function Person(name, age) {
-  const person = {};
+  const person = Object.create(personMethod);
 
   person.name = name;
   person.age = age;  
 
-  person.eat = personMethod.eat;
-  person.sleep = personMethod.sleep;
-
   return person;
 }
 
-console.log(Person('Tusar', 26).eat);
+console.log(Person('Tusar', 26));
