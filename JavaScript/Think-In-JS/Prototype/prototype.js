@@ -168,21 +168,25 @@
 // Tusar.sleep();
 
 
+const personMethod = {
+  eat : function () {
+    console.log('Person can eating!');
+  },
+  sleep : function () {
+    console.log('Person can sleeping!');
+  }
+}
+
 function Person(name, age) {
   const person = {};
 
   person.name = name;
-  person.age = age;
+  person.age = age;  
 
-  person.eat = function () {
-    console.log('Person can eating!');
-  }
-
-  person.sleep = function () {
-    console.log('Person can sleeping!');
-  }
+  person.eat = personMethod.eat;
+  person.sleep = personMethod.sleep;
 
   return person;
 }
 
-console.log(Person());
+console.log(Person('Tusar', 26).eat);
