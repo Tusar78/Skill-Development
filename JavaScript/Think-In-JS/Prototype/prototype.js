@@ -149,20 +149,40 @@
 // const Tusar = new Person("Tusar", 24);
 // console.log(Tusar.sleep());
 
+// function Person(name, age) {
+//   const person = Object.create(Person.prototype);
+
+//   person.name = name;
+//   person.age = age;
+
+//   return person;
+// }
+
+// Person.prototype = {
+//   sleep() {
+//     console.log(`${this.name} sleeping!`);
+//   },
+// };
+
+// const Tusar = new Person("Tusar", 24);
+// Tusar.sleep();
+
+
 function Person(name, age) {
-  const person = Object.create(Person.prototype);
+  const person = {};
 
   person.name = name;
   person.age = age;
 
+  person.eat = function () {
+    console.log('Person can eating!');
+  }
+
+  person.sleep = function () {
+    console.log('Person can sleeping!');
+  }
+
   return person;
 }
 
-Person.prototype = {
-  sleep() {
-    console.log(`${this.name} sleeping!`);
-  },
-};
-
-const Tusar = new Person("Tusar", 24);
-Tusar.sleep();
+console.log(Person());
