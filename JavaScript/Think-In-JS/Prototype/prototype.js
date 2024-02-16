@@ -1,4 +1,4 @@
-// const methodObj = {
+// const methodObj = {P
 //   eat() {
 //     console.log("I am eating");
 //   },
@@ -167,23 +167,48 @@
 // const Tusar = new Person("Tusar", 24);
 // Tusar.sleep();
 
+// const personMethod = {
+//   eat: function () {
+//     console.log("Person can eating!");
+//   },
+//   sleep: function () {
+//     console.log("Person can sleeping!");
+//   },
+// };
 
-const personMethod = {
-  eat : function () {
-    console.log('Person can eating!');
-  },
-  sleep : function () {
-    console.log('Person can sleeping!');
-  }
-}
+// function Person(name, age) {
+//   const person = Object.create(personMethod);
 
-function Person(name, age) {
-  const person = Object.create(personMethod);
+//   person.name = name;
+//   person.age = age;
 
-  person.name = name;
-  person.age = age;  
+//   return person;
+// }
 
-  return person;
-}
+// const tusar = Person('Tusar', 23);
+// tusar.eat()
 
-console.log(Person('Tusar', 26));
+
+// Object Instance
+// function Person(name, age) {
+//   const person = Object.create(Person.prototype)
+
+//   person.name = name;
+//   person.age = age;
+
+//   return person;
+// }
+
+// Person.prototype = {
+//   eat(name) {
+//     console.log(`${name} can eat`);
+//   },
+//   sleep() {
+//     console.log('Person Can Sleep');
+//   }
+// }
+
+// const tusar = Person("Tusar", 24);
+// tusar.eat('Tusar');
+
+// 
