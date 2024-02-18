@@ -67,12 +67,38 @@
 // Series 3.1
 // (1x2)=2 + (2x3)=6  + (3x4)=12 + . . . . .  + n1 x n2 = summation
 
-const num1 = prompt("Enter your first number: ");
-const num2 = prompt("Enter your second number: ");
+// const num1 = prompt("Enter your first number: ");
+// const num2 = prompt("Enter your second number: ");
+
+// const getSeries = (num1, num2) => {
+//   let n1 = 1,
+//     n2 = 2,
+//     sum = 0,
+//     series = "";
+
+//   while (n1 <= num1 && n2 <= num2) {
+//     sum += n1 * n2;
+//     series += `(${n1}x${n2})=${n1 * n2} + `;
+//     n1 += 1;
+//     n2 += 1;
+//   }
+
+//   return {sum, series};
+// };
+
+// const {sum, series} = getSeries(num1, num2);
+// const result = `${series} = ${sum}`;
+// console.log(result);
+
+// Series 3.2
+// (1x3)=3 + (2x5)=10  + (3x7)=21 + . . . . .  + (n1xn2) = summation
+
+const num1 = +prompt("Enter your first number: ");
+const num2 = +prompt("Enter your second number: ");
 
 const getSeries = (num1, num2) => {
   let n1 = 1,
-    n2 = 2,
+    n2 = 3,
     sum = 0,
     series = "";
 
@@ -80,12 +106,11 @@ const getSeries = (num1, num2) => {
     sum += n1 * n2;
     series += `(${n1}x${n2})=${n1 * n2} + `;
     n1 += 1;
-    n2 += 1;
+    n2 += 2;
   }
-
-  return {sum, series};
+  return { sum, series };
 };
 
-const {sum, series} = getSeries(num1, num2);
-const result = `${series} = ${sum}`;
+const { sum, series } = getSeries(num1, num2);
+const result = `${series.slice(1, -2)} = ${sum}`;
 console.log(result);
