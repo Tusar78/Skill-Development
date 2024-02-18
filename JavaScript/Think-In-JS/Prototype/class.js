@@ -172,30 +172,57 @@
 
 // Let's try to make prototypical inheritance to class base inheritance
 
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  eat() {
-    console.log(`${this.name} can eating`);
-  }
-}
+//   eat() {
+//     console.log(`${this.name} can eating`);
+//   }
+// }
 
-class Sakib extends Person {
-  constructor(name, age, type, country) {
-    super(Person)
-    this.name = name;
-    this.age = age;
-    this.type = type;
-    this.country = country;
-  }
+// class Sakib extends Person {
+//   constructor(name, age, type, country) {
+//     super(Person)
+//     this.name = name;
+//     this.age = age;
+//     this.type = type;
+//     this.country = country;
+//   }
 
-  play() {
-    console.log(`${this.name} can play`);
-  }
-}
+//   play() {
+//     console.log(`${this.name} can play`);
+//   }
+// }
 
-const sakib = new Sakib('Sakib', 37, 'All rounder', 'BD');
-sakib.eat()
+// const sakib = new Sakib('Sakib', 37, 'All rounder', 'BD');
+// sakib.eat()
+
+// Let's practice getter and setter
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   eat() {
+//     console.log(`${this.name} can eat`);
+//   }
+
+//   get getName() {
+//     console.log(`${this.name}`);
+//   }
+
+//   set setName(myName) {
+//     this.name = myName;
+//   }
+// }
+
+// const tusar = new Person("Tusar", 24);
+// tusar.eat();
+// tusar.getName;
+// tusar.setName = 'Rakib';
+// console.log(tusar.name);
