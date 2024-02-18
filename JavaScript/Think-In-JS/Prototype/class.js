@@ -124,3 +124,18 @@
 // samsung.getFunc;
 // samsung.setFunc = "Hello";
 // console.log(samsung.name);
+
+
+
+
+Object.prototype.greet = function() {
+    alert('Hello Tusar');
+}
+
+const f = function Person() {
+  
+}
+
+let myObj = {}
+
+console.dirc(f);
