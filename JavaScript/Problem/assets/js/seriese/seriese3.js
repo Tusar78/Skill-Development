@@ -112,5 +112,5 @@ const getSeries = (num1, num2) => {
 };
 
 const { sum, series } = getSeries(num1, num2);
-const result = `${series.slice(1, -2)} = ${sum}`;
+const result = `${series.slice(0, -2)} = ${sum}`;
 console.log(result);
