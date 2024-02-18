@@ -141,31 +141,61 @@
 // console.dirc(f);
 
 // Prototypical Inheritance 
-function Mobile(camera, call) {
-  this.camera = camera;
-  this.call = call;
-}
+// function Mobile(camera, call) {
+//   this.camera = camera;
+//   this.call = call;
+// }
 
-Mobile.prototype = {
-  video: function() {
-    console.log('Mobile have video feture');
+// Mobile.prototype = {
+//   video: function() {
+//     console.log('Mobile have video feture');
+//   }
+// }
+
+// function Samsung(camera, call, displayType, proccesorType) {
+//   Mobile.call(this);
+//   this.camera = camera;
+//   this.call = call;
+//   this.displayType = displayType;
+//   this.proccesorType = proccesorType;
+// }
+
+// Samsung.prototype = Object.create(Mobile.prototype);
+// Samsung.prototype.constructor = Samsung;
+// Samsung.prototype.zoom = function() {
+//     console.log('This mobile can zoom 100x');
+// }
+
+// const samsung = new Samsung('yes', 'yes', 'Gorilla', 'exenose');
+// console.log(samsung);
+// samsung.zoom();
+
+// Let's try to make prototypical inheritance to class base inheritance
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  eat() {
+    console.log(`${this.name} can eating`);
   }
 }
 
-function Samsung(camera, call, displayType, proccesorType) {
-  Mobile.call(this);
-  this.camera = camera;
-  this.call = call;
-  this.displayType = displayType;
-  this.proccesorType = proccesorType;
+class Sakib extends Person {
+  constructor(name, age, type, country) {
+    super(Person)
+    this.name = name;
+    this.age = age;
+    this.type = type;
+    this.country = country;
+  }
+
+  play() {
+    console.log(`${this.name} can play`);
+  }
 }
 
-Samsung.prototype = Object.create(Mobile.prototype);
-Samsung.prototype.constructor = Samsung;
-Samsung.prototype.zoom = function() {
-    console.log('This mobile can zoom 100x');
-}
-
-const samsung = new Samsung('yes', 'yes', 'Gorilla', 'exenose');
-console.log(samsung);
-samsung.zoom();
+const sakib = new Sakib('Sakib', 37, 'All rounder', 'BD');
+sakib.eat()
