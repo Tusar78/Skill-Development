@@ -128,14 +128,44 @@
 
 
 
-Object.prototype.greet = function() {
-    alert('Hello Tusar');
-}
+// Object.prototype.greet = function() {
+//     alert('Hello Tusar');
+// }
 
-const f = function Person() {
+// const f = function Person() {
   
+// }
+
+// let myObj = {}
+
+// console.dirc(f);
+
+// Prototypical Inheritance 
+function Mobile(camera, call) {
+  this.camera = camera;
+  this.call = call;
 }
 
-let myObj = {}
+Mobile.prototype = {
+  video: function() {
+    console.log('Mobile have video feture');
+  }
+}
 
-console.dirc(f);
+function Samsung(camera, call, displayType, proccesorType) {
+  Mobile.call(this);
+  this.camera = camera;
+  this.call = call;
+  this.displayType = displayType;
+  this.proccesorType = proccesorType;
+}
+
+Samsung.prototype = Object.create(Mobile.prototype);
+Samsung.prototype.constructor = Samsung;
+Samsung.prototype.zoom = function() {
+    console.log('This mobile can zoom 100x');
+}
+
+const samsung = new Samsung('yes', 'yes', 'Gorilla', 'exenose');
+console.log(samsung);
+samsung.zoom();
