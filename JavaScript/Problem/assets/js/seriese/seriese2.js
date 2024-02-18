@@ -11,7 +11,7 @@ const getSeries = (num) => {
   for (let i = 1; i <= num; i++) {
     if (i % 2 != 0) {
       sum += i;
-      if (i == n) {
+      if (i == num) {
         series += i;
       } else {
         series += i + " + ";

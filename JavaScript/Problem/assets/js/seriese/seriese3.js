@@ -32,7 +32,7 @@
 //   for (let i = 1; i <= num1; i++) {
 //     for (let j = 2; j <= num1; j++) {
 //       sum += i * j;
-//       series += i+'x'+j + ' + ';   
+//       series += i+'x'+j + ' + ';
 //     }
 
 //   }
@@ -44,22 +44,48 @@
 // console.log(series);
 // console.log(sum);
 
-let num1 = +prompt("Enter first your number: ");
-let num2 = +prompt("Enter second your number: ");
+// let num1 = +prompt("Enter first your number: ");
+// let num2 = +prompt("Enter second your number: ");
 
-function getSeries(num1, num1) {
-  let n1 = 1;
-  let n2 = 2;
-  let sum = 0;
+// function getSeries(num1, num1) {
+//   let n1 = 1;
+//   let n2 = 2;
+//   let sum = 0;
+
+//   while (n1 <= num1 && n2 <= num2) {
+//     sum += n1 * n2;
+//     n1++;
+//     n2++;
+//   }
+
+//   return sum;
+// }
+
+// let series = getSeries(num1, num2);
+// console.log(series);
+
+// Series 3.1
+// (1x2)=2 + (2x3)=6  + (3x4)=12 + . . . . .  + n1 x n2 = summation
+
+const num1 = prompt("Enter your first number: ");
+const num2 = prompt("Enter your second number: ");
+
+const getSeries = (num1, num2) => {
+  let n1 = 1,
+    n2 = 2,
+    sum = 0,
+    series = "";
 
   while (n1 <= num1 && n2 <= num2) {
     sum += n1 * n2;
-    n1++;
-    n2++;
+    series += `(${n1}x${n2})=${n1 * n2} + `;
+    n1 += 1;
+    n2 += 1;
   }
 
-  return sum;
-}
+  return {sum, series};
+};
 
-let series = getSeries(num1, num2);
-console.log(series);
+const {sum, series} = getSeries(num1, num2);
+const result = `${series} = ${sum}`;
+console.log(result);
