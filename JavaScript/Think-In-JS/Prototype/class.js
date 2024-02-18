@@ -75,52 +75,52 @@
 // console.log(Sakib);
 
 // Getter and setter
-class Mobile {
-  constructor(camera, ram){
-    this.camera = camera;
-    this.ram = ram;
-  }
+// class Mobile {
+//   constructor(camera, ram) {
+//     this.camera = camera;
+//     this.ram = ram;
+//   }
 
-  call() {
-    console.log(`${this.name} can have call`);
-  }
-}
+//   call() {
+//     console.log(`${this.name} can have call`);
+//   }
+// }
 
-class Phone extends Mobile {
-  constructor(name, touch, camera, ram) {
-    super(camera, ram)
-    this.camera = camera;
-    this.ram = ram;
-    this.name = name;
-    this.touch = touch;
-  }
+// class Phone extends Mobile {
+//   constructor(name, touch, camera, ram) {
+//     super(camera, ram);
+//     this.camera = camera;
+//     this.ram = ram;
+//     this.name = name;
+//     this.touch = touch;
+//   }
 
-  video() {
-    console.log(`${this.name} can have 1080px video!`);
-  }
+//   video() {
+//     console.log(`${this.name} can have 1080px video!`);
+//   }
 
-  get getFunc() {
-    console.log('Hello World');
-  }
-  
-  set setFunc(name) {
-    this.name = name;
-  }
-  // This method denote to this class not this constructor
-  // static call() {
-  //   console.log(`${this.name} can have calling feature!`);
-  // }
-  call() {
-    super.call()
-    console.log(`${this.name} can have calling feature!`);
-  }
-}
+//   get getFunc() {
+//     console.log("Hello World");
+//   }
 
-const samsung = new Phone('Samsung', 'Gorilla', '12mp', '8gb');
-// console.log(Samsung.call());
+//   set setFunc(name) {
+//     this.name = name;
+//   }
+//   // This method denote to this class not this constructor
+//   // static call() {
+//   //   console.log(`${this.name} can have calling feature!`);
+//   // }
+//   call() {
+//     super.call();
+//     console.log(`${this.name} can have calling feature!`);
+//   }
+// }
 
-// Phone.call()
+// const samsung = new Phone("Samsung", "Gorilla", "12mp", "8gb");
+// // console.log(Samsung.call());
 
-samsung.getFunc
-samsung.setFunc = 'Hello';
-console.log(samsung.name)
+// // Phone.call()
+
+// samsung.getFunc;
+// samsung.setFunc = "Hello";
+// console.log(samsung.name);
