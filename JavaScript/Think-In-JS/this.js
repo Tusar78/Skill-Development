@@ -69,35 +69,35 @@
  */
 
 //  1. Implicit Binding
-let name = 'Rakib';
-const person = {
-  name: 'Tusar',
-  age: 24,
-  showName: function () {
-    console.log(this.name);
-  }
-}
+// let name = 'Rakib';
+// const person = {
+//   name: 'Tusar',
+//   age: 24,
+//   showName: function () {
+//     console.log(this.name);
+//   }
+// }
 
-person.showName();
+// person.showName();
 
-function printNameFunction(obj) {
-  obj.printName = function() {
-    console.log(this.name);
-  }
-}
+// function printNameFunction(obj) {
+//   obj.printName = function() {
+//     console.log(this.name);
+//   }
+// }
 
-const sharif = {
-  name: 'Sharif',
-  age: 28
-}
+// const sharif = {
+//   name: 'Sharif',
+//   age: 28
+// }
 
-const rakib = {
-  name: 'Rakib',
-  age: 31
-}
+// const rakib = {
+//   name: 'Rakib',
+//   age: 31
+// }
 
-printNameFunction(sharif);
-printNameFunction(rakib);
+// printNameFunction(sharif);
+// printNameFunction(rakib);
 
-sharif.printName();
-rakib.printName();
+// sharif.printName();
+// rakib.printName();
