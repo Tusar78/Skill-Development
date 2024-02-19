@@ -136,6 +136,5 @@ const sakib = {
 let v1 = 'Handsome';
 let v2 = 'All-rounder';
 
-let vv = [v1, v2]
-
-showName.apply(sakib, vv);
+const myShow = showName.bind(sakib, v1, v2);
+myShow();
