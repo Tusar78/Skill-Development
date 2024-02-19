@@ -101,3 +101,23 @@
 
 // sharif.printName();
 // rakib.printName();
+
+function person(){
+  return {
+    name: 'Rubi',
+    age: 30,
+    showName: function () {
+      console.log(this.name);
+    },
+    anotherName: {
+      name: 'Tusar',
+      age: 24,
+      showName: function() {
+        console.log(this.name);
+      }
+    }
+  }
+}
+
+const rubi = person();
+rubi.anotherName.showName();
