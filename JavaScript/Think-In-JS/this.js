@@ -102,22 +102,40 @@
 // sharif.printName();
 // rakib.printName();
 
-function person(){
-  return {
-    name: 'Rubi',
-    age: 30,
-    showName: function () {
-      console.log(this.name);
-    },
-    anotherName: {
-      name: 'Tusar',
-      age: 24,
-      showName: function() {
-        console.log(this.name);
-      }
-    }
-  }
+// function person(){
+//   return {
+//     name: 'Rubi',
+//     age: 30,
+//     showName: function () {
+//       console.log(this.name);
+//     },
+//     anotherName: {
+//       name: 'Tusar',
+//       age: 24,
+//       showName: function() {
+//         console.log(this.name);
+//       }
+//     }
+//   }
+// }
+
+// const rubi = person();
+// rubi.anotherName.showName();
+
+// Let's practice explicit bindings
+function showName (v1, v2) {
+  console.log(`${this.name} is a ${v1} and also ${v2}`);
 }
 
-const rubi = person();
-rubi.anotherName.showName();
+const sakib = {
+  name: 'Sakib',
+  age: 37,
+  
+}
+
+let v1 = 'Handsome';
+let v2 = 'All-rounder';
+
+let vv = [v1, v2]
+
+showName.apply(sakib, vv);
