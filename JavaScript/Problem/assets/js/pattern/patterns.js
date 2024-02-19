@@ -10,6 +10,13 @@ let patternType = +prompt("Enter Pattern Type, 'Press between 1 to 10'");
 // let patternOutput = prompt("You Can Display: 'Letter', 'Number', 'Symbol', So which you want to display?");
 
 // Pattern One
+/*
+x 
+x x 
+x x x 
+x x x x 
+x x x x x 
+*/
 const patternOne = (n) => {
   let pattern1 = "";
   for (let i = 1; i <= n; i++) {
@@ -23,6 +30,13 @@ const patternOne = (n) => {
 };
 
 // Pattern Two
+/*
+x x x x x 
+x x x x 
+x x x 
+x x 
+x 
+*/
 const patternTwo = (n) => {
   let pattern2 = "";
   for (let i = n; i >= 1; i--) {
@@ -36,6 +50,17 @@ const patternTwo = (n) => {
 };
 
 // Pattern Three
+/*
+x 
+x x 
+x x x 
+x x x x 
+x x x x x 
+x x x x 
+x x x 
+x x 
+x
+*/
 const patternThree = (n) => {
   let pattern3 = "";
   for (let i = 1; i <= n; i++) {

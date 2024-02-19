@@ -9,8 +9,8 @@ Pattern Number: 06
 
 let n = +prompt("Enter row: ");
 
-const patternSix = n => {
-  let pattern  = '';
+// const patternSix = n => {
+//   let pattern  = '';
 
   // for (let i = n - 1; i >= 1; i--) {
   //   for (let j = 1; j <= i; j++) {
@@ -19,19 +19,38 @@ const patternSix = n => {
   //   pattern += '\n';
   // }
 
+//   for (let i = 1; i <= n; i++) {
+//     for (let j = 1; j <= n-i; j++) {
+//       pattern += '  ';
+      
+//     }
+//     for (let j = 1; j <= i; j++) {
+//       pattern += '*' + ' ';
+//     }
+//     pattern += '\n';
+//   }
+
+//   return {pattern};
+// }
+
+// let {pattern} = patternSix(n);
+// console.log(pattern);
+
+const getPattern = n => {
+  let pattern = '';
+
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n-i; j++) {
-      pattern += '  ';
-      
+      pattern += ' ';
     }
     for (let j = 1; j <= i; j++) {
-      pattern += '*' + ' ';
+      pattern += 'x' + ' ';
     }
     pattern += '\n';
   }
 
-  return {pattern};
+  return {pattern}
 }
 
-let {pattern} = patternSix(n);
+let {pattern} = getPattern(n);
 console.log(pattern);
