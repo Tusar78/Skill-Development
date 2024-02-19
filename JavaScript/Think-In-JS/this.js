@@ -123,18 +123,30 @@
 // rubi.anotherName.showName();
 
 // Let's practice explicit bindings
-function showName (v1, v2) {
-  console.log(`${this.name} is a ${v1} and also ${v2}`);
-}
+// function showName (v1, v2) {
+//   console.log(`${this.name} is a ${v1} and also ${v2}`);
+// }
 
-const sakib = {
-  name: 'Sakib',
-  age: 37,
+// const sakib = {
+//   name: 'Sakib',
+//   age: 37,
   
+// }
+
+// let v1 = 'Handsome';
+// let v2 = 'All-rounder';
+
+// const myShow = showName.bind(sakib, v1, v2);
+// myShow();
+
+var name = 'Tusar';
+
+let myFunc = function() {
+  console.log(this.name);
 }
 
-let v1 = 'Handsome';
-let v2 = 'All-rounder';
+let sakib = {
+  name: 'Sakib'
+}
 
-const myShow = showName.bind(sakib, v1, v2);
-myShow();
+myFunc();
