@@ -51,12 +51,53 @@
 // m();
 
 
-function Person(name, age) {
-  console.log(this.name);
+// function Person(name, age) {
+//   console.log(this.name);
+// }
+
+// const Sakib = {
+//   nameE: 'Sakib'
+// }
+
+// Person();
+
+/** This  keyword Rule
+ * Implicit Binding
+ * Explicit Binding
+ * new binding
+ * window binding
+ */
+
+//  1. Implicit Binding
+let name = 'Rakib';
+const person = {
+  name: 'Tusar',
+  age: 24,
+  showName: function () {
+    console.log(this.name);
+  }
 }
 
-const Sakib = {
-  nameE: 'Sakib'
+person.showName();
+
+function printNameFunction(obj) {
+  obj.printName = function() {
+    console.log(this.name);
+  }
 }
 
-Person();
+const sharif = {
+  name: 'Sharif',
+  age: 28
+}
+
+const rakib = {
+  name: 'Rakib',
+  age: 31
+}
+
+printNameFunction(sharif);
+printNameFunction(rakib);
+
+sharif.printName();
+rakib.printName();
