@@ -188,7 +188,6 @@
 // const tusar = Person('Tusar', 23);
 // tusar.eat()
 
-
 // Object Instance
 // function Person(name, age) {
 //   const person = Object.create(Person.prototype)
@@ -224,3 +223,25 @@
 // console.dir(rabbit);
 
 // Awesome Getter And Setter
+let user = {
+  name: "Tusar",
+  sureName: "Ali",
+
+  set fullName(value) {
+    [this.name, this.sureName] = value.split(" ");
+  },
+
+  get fullName() {
+    return `${this.name} ${this.sureName}`;
+  },
+};
+
+let admin = {
+  __proto__: user,
+  admin: true,
+};
+
+alert(admin.fullName);
+
+admin.fullName = 'Rakibul Islam';
+alert(admin.fullName);
