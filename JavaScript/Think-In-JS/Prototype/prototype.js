@@ -212,13 +212,15 @@
 // tusar.eat('Tusar');
 
 // Deeply Prototype
-let animal = {
-    eats: true
-}
+// let animal = {
+//     eats: true
+// }
 
-let rabbit = {
-    jumps: true
-}
-rabbit.__proto__ = animal;
-console.log(rabbit.eats);
-console.dir(rabbit);
+// let rabbit = {
+//     jumps: true
+// }
+// rabbit.__proto__ = animal;
+// console.log(rabbit.eats);
+// console.dir(rabbit);
+
+// Awesome Getter And Setter
