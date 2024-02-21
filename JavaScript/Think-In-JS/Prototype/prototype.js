@@ -1,4 +1,4 @@
-// const methodObj = {P
+// const methodObj = {
 //   eat() {
 //     console.log("I am eating");
 //   },
@@ -211,16 +211,16 @@
 // tusar.eat('Tusar');
 
 // Deeply Prototype
-let animal1 = {
-    eats: true
-}
+// let animal1 = {
+//     eats: true
+// }
 
-let rabbit1 = {
-    jumps: true
-}
-rabbit1.__proto__ = animal1;
-console.log(rabbit1.eats);
-console.dir(rabbit1);
+// let rabbit1 = {
+//     jumps: true
+// }
+// rabbit1.__proto__ = animal1;
+// console.log(rabbit1.eats);
+// console.dir(rabbit1);
 
 // Awesome Getter And Setter
 // let user = {
@@ -250,23 +250,39 @@ console.dir(rabbit1);
 
 
 // Starting F.Prototype
-let animal = {
-  eats: true
-}
+// let animal = {
+//   eats: true
+// }
 
-function Rabbit(name) {
-  this.name = name;
-}
+// function Rabbit(name) {
+//   this.name = name;
+// }
 
-Rabbit.prototype = animal;
-Rabbit.prototype.constructor = Rabbit;
+// Rabbit.prototype = animal;
+// Rabbit.prototype.constructor = Rabbit;
 
-let rabbit = new Rabbit('White Rabbit');
-console.log(rabbit.eats);
-console.log(rabbit);
+// let rabbit = new Rabbit('White Rabbit');
+// console.log(rabbit.eats);
+// console.log(rabbit);
 
-function Tusar() {}
-const tusar = new Tusar();
-console.dir(Tusar);
-console.log(tusar.constructor == Tusar);
-console.log(Tusar.prototype.constructor == Tusar);
+// function Tusar() {}
+// const tusar = new Tusar();
+// console.dir(Tusar);
+// console.log(tusar.constructor == Tusar);
+// console.log(Tusar.prototype.constructor == Tusar);
+
+// function Rabbit() {}
+// Rabbit.prototype = {
+//   jumps: true
+// };
+
+// Rabbit.prototype.constructor = Rabbit;
+
+// let rabbit = new Rabbit();
+// console.log(rabbit.constructor === Rabbit); // false
+// console.log(rabbit);
+
+// Native Prototype 
+let obj = {};
+console.log(obj);
+alert(obj);
