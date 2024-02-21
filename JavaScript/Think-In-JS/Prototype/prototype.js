@@ -211,37 +211,56 @@
 // tusar.eat('Tusar');
 
 // Deeply Prototype
-// let animal = {
-//     eats: true
-// }
+let animal1 = {
+    eats: true
+}
 
-// let rabbit = {
-//     jumps: true
-// }
-// rabbit.__proto__ = animal;
-// console.log(rabbit.eats);
-// console.dir(rabbit);
+let rabbit1 = {
+    jumps: true
+}
+rabbit1.__proto__ = animal1;
+console.log(rabbit1.eats);
+console.dir(rabbit1);
 
 // Awesome Getter And Setter
-let user = {
-  name: "Tusar",
-  sureName: "Ali",
+// let user = {
+//   name: "Tusar",
+//   sureName: "Ali",
 
-  set fullName(value) {
-    [this.name, this.sureName] = value.split(" ");
-  },
+//   set fullName(value) {
+//     [this.name, this.sureName] = value.split(" ");
+//   },
 
-  get fullName() {
-    return `${this.name} ${this.sureName}`;
-  },
-};
+//   get fullName() {
+//     return `${this.name} ${this.sureName}`;
+//   },
+// };
 
-let admin = {
-  __proto__: user,
-  admin: true,
-};
+// let admin = {
+//   __proto__: user,
+//   admin: true,
+// };
 
-alert(admin.fullName);
+// alert(admin.fullName);
 
-admin.fullName = 'Rakibul Islam';
-alert(admin.fullName);
+// admin.fullName = 'Rakibul Islam';
+// alert(admin.fullName);
+
+// console.log(admin);
+
+
+// Starting F.Prototype
+let animal = {
+  eats: true
+}
+
+function Rabbit(name) {
+  this.name = name;
+}
+
+Rabbit.prototype = animal;
+Rabbit.prototype.constructor = Rabbit;
+
+let rabbit = new Rabbit('White Rabbit');
+console.log(rabbit.eats);
+console.log(rabbit);
