@@ -264,3 +264,9 @@ Rabbit.prototype.constructor = Rabbit;
 let rabbit = new Rabbit('White Rabbit');
 console.log(rabbit.eats);
 console.log(rabbit);
+
+function Tusar() {}
+const tusar = new Tusar();
+console.dir(Tusar);
+console.log(tusar.constructor == Tusar);
+console.log(Tusar.prototype.constructor == Tusar);
