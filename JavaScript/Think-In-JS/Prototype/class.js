@@ -228,25 +228,26 @@
 // console.log(tusar.name);
 
 // Static Method
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
 
-  eat() {
-    console.log(`${this.name} can eat`);
-  }
+//   eat() {
+//     console.log(`${this.name} can eat`);
+//   }
 
-  static myStaticFunction(p1, p2) {
-    if (p1.age == p2.age) {
-      console.log('Two person age are equal');
-    } else {
-      console.log('Two person age are not equal');
-    }
-  }
-}
+//   static myStaticFunction(p1, p2) {
+//     if (p1.age == p2.age) {
+//       console.log('Two person age are equal');
+//     } else {
+//       console.log('Two person age are not equal');
+//     }
+//   }
+// }
 
-const tusar = new Person('Tusar', 24);
-const rakib = new Person("Rakib", 31);
-Person.myStaticFunction(tusar, rakib);
+// const tusar = new Person('Tusar', 24);
+// const rakib = new Person("Rakib", 31);
+// Person.myStaticFunction(tusar, rakib);
+
