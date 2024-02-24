@@ -283,6 +283,18 @@
 // console.log(rabbit);
 
 // Native Prototype 
-let obj = {};
-console.log(obj);
-alert(obj);
+// let obj = {};
+// console.log(obj);
+// alert(obj);
+
+function repeat(n, op) {
+    let jn = '';
+    for (let i = 0; i < n; i++) {
+        jn += op + ' ';
+    }
+
+    return {jn}
+  }
+  
+const {jn} = repeat(3, 'Tusar');
+console.log(jn);
