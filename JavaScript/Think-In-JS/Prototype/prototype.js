@@ -287,14 +287,26 @@
 // console.log(obj);
 // alert(obj);
 
-function repeat(n, op) {
-    let jn = '';
-    for (let i = 0; i < n; i++) {
-        jn += op + ' ';
-    }
+// function repeat(n, op) {
+//     let jn = '';
+//     for (let i = 0; i < n; i++) {
+//         jn += op + ' ';
+//     }
 
-    return {jn}
-  }
+//     return {jn}
+//   }
   
-const {jn} = repeat(3, 'Tusar');
-console.log(jn);
+// const {jn} = repeat(3, 'Tusar');
+// console.log(jn);
+
+let animal = {
+  eats: true
+}
+
+
+
+let rabbit = Object.create(animal, {
+    jump: {value: true}
+});
+
+console.log(rabbit);
