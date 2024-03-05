@@ -11,8 +11,10 @@ const obj2 = {
 // const obj3 = Object.assign(obj1, obj2);
 // const obj3 = {...obj1, ...obj2}
 const objKeys = Object.keys(obj1);
-console.log(objKeys);
+const objValues = Object.values(obj2);
+const objEntries = Object.entries(obj1);
+// console.log(objEntries);
 
-// for (let i = 0; i < objKeys.length; i++) {
-//     console.log(obj1[objKeys[i]]);    
-// }
+for (let i = 0; i < objEntries.length; i++) {
+    console.log(objEntries[i][i]);    
+}
