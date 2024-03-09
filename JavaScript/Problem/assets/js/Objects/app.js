@@ -1,20 +1,47 @@
-// const obj1 = {
-//     name: 'Tusar',
-//     email: 'tusar@gmail.com'
-// }
+/**
+=> Problem 1: Write a JavaScript program to list the properties of a JavaScript object.
+Sample object:
+    var student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12 };
+Sample Output: 
+    name,sclass,rollno
+ */
 
-// const obj2 = {
-//     name1: 'Rakib',
-//     email1: 'rakib@gmail.com'
-// }
+// My Own Solution
+const student = {
+    name : "David Rayy",
+    sclass : "VI",
+    rollno : 12
+}
 
-// // const obj3 = Object.assign(obj1, obj2);
-// // const obj3 = {...obj1, ...obj2}
-// const objKeys = Object.keys(obj1);
-// const objValues = Object.values(obj2);
-// const objEntries = Object.entries(obj1);
-// // console.log(objEntries);
+const keysOfStudent = Object.keys(student);
+const keysToStrOfStd = keysOfStudent.toString();
+console.log(keysToStrOfStd);
 
-// for (let i = 0; i < objEntries.length; i++) {
-//     console.log(objEntries[i][i]);    
-// }
+// My Solution 2
+const findKeys = obj => {
+    const keysArr = [];
+    if (Array.isArray(obj)) {
+        console.log("You should enter object!");
+    } else if (obj === null) {
+        console.log("You should enter object!");
+    } else if (typeof(obj) === 'object') {
+        for (const key in obj) {
+            keysArr.push(key)
+        }
+    }
+
+    return [keysArr]
+}
+
+const student2 = {
+    name: 'Tusar',
+    class: 'BSC in CSE',
+    roll: 62
+}
+
+
+const [keysArr] = findKeys(student2);
+console.log(keysArr.toString());
