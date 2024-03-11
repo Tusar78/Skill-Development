@@ -1,7 +1,7 @@
 const person = {}
 person.name = "Tusar";
 person.email = "tusar@gmail.com";
-console.log(person);
+// console.log(person);
 
 class Person {
     constructor(name, email) {
@@ -14,11 +14,12 @@ class Person {
     }
 
     sendMsg(msg) {
-        console.log();
+        console.log(`${msg} ${this.name}`);
+        console.log(`send to ${this.email}`);
     }
 }
 
-const p = new Person("tusar", "tus@gmail.com");
-const p1 = new Person();
-console.log(p);
-console.log(p1);
+const p1 = new Person("tusar", "tus@gmail.com");
+const p2 = new Person("Rakib", "rakib@gmail.com");
+
+p2.sendMsg("Hello");
