@@ -128,10 +128,18 @@ class Person {
     static isValid(age) {
         return age >= 18;
     }
+
+    static isEqual(p1, p2) {
+        if (p1._name !== p2._name) return false;
+        if (p1._email !== p2._email) return false;
+
+        return true;
+    }
 }
 
 const p1 = new Person('Tusar', 'tusar@gmail.com');
 const p2 = new Person('Rakib', 'rakib@gmail.com');
+const p4 = new Person('Tusar', 'tusar@gmail.com');
 
 const testObj = {
     name: 'Aopo',
@@ -144,4 +152,4 @@ if (Person.isValid(testObj.age)) {
     p3 = new Person(testObj.name, testObj.email);
 }
 
-console.log(p3);
+console.log(Person.isEqual(p1, p4));
