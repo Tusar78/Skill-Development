@@ -40,4 +40,4 @@ class Person {
   }
 }
 
-module.export = Person;
+module.exports = Person;
