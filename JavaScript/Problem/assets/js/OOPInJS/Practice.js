@@ -152,4 +152,5 @@ if (Person.isValid(testObj.age)) {
     p3 = new Person(testObj.name, testObj.email);
 }
 
-console.log(Person.isEqual(p1, p4));
+console.log(Person.isEqual(p1, p1));
+p1.print()
