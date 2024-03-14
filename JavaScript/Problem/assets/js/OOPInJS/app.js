@@ -51,31 +51,54 @@ person.email = "tusar@gmail.com";
 // console.log(p1.getName());
 // p1.print();
 
+// class Person {
+//     constructor(name, email) {
+//         this._name = name;
+//         this._email = email;
+//     }
+
+//     setName(name) {
+//         this._name = name;
+//     }
+
+//     getName() {
+//         return this._name;
+//     }
+
+//     sendMsg(msg) {
+//         console.log(`To ${this._email}`);
+//         console.log(`Hello ${this._sanitizeMsg(msg)}`);
+//     }
+
+//     _sanitizeMsg(msg) {
+//         return msg.trim().toLowerCase();
+//     }
+// }
+
+// const p1 = new Person("Tusar", "tusar@gmail.com");
+// const p2 = new Person("Rakib", "rakib@gmail.com");
+
+// p2.sendMsg("        Wow! Your looking so cool.   ");
+
+// Getter and Setter
 class Person {
     constructor(name, email) {
         this._name = name;
         this._email = email;
     }
 
-    setName(name) {
-        this._name = name;
-    }
-
-    getName() {
+    get name() {
         return this._name;
     }
 
-    sendMsg(msg) {
-        console.log(`To ${this._email}`);
-        console.log(`Hello ${this._sanitizeMsg(msg)}`);
-    }
-
-    _sanitizeMsg(msg) {
-        return msg.trim().toLowerCase();
+    set name(value) {
+        this._name = value;
     }
 }
 
-const p1 = new Person("Tusar", "tusar@gmail.com");
-const p2 = new Person("Rakib", "rakib@gmail.com");
+const p1 = new Person('Tusar', 'tusar@gmail.com');
 
-p2.sendMsg("        Wow! Your looking so cool.   ");
+console.log(p1.name);
+p1.name = 'Rakib';
+
+console.log(p1);
