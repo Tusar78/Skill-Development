@@ -39,3 +39,5 @@ class Person {
     return false;
   }
 }
+
+module.export = Person;
