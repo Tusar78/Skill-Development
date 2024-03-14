@@ -92,13 +92,36 @@ class Person {
     }
 
     set name(value) {
-        this._name = value;
+        if (value === 'Tus') {
+            return
+        } else {
+            this._name = value;
+        }
     }
 }
 
 const p1 = new Person('Tusar', 'tusar@gmail.com');
+const p2 = new Person('Rakib', 'rakib@gmail.com');
 
-console.log(p1.name);
-p1.name = 'Rakib';
+console.log(p2.name);
+p2.name = 'Tus';
 
-console.log(p1);
+console.log(p2.name);
+
+// class Person {
+//     constructor(name, email) {
+//         this._name = name;
+//         this._email = email;
+//     }
+
+//     print() {
+//         console.log(this + '');
+//     }
+
+//     toString() {
+//         return `Name: ${this._name}, Email: ${this._email}`
+//     }
+// }
+
+// const p1 = new Person('Tusar', 'tusar@gmail.com');
+// p1.print();
