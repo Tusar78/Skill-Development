@@ -1,4 +1,4 @@
-class Person {
+export class Person {
   constructor(name, email) {
     this._name = name;
     this._email = email;
@@ -39,5 +39,6 @@ class Person {
     return false;
   }
 }
+
 
 module.exports = Person;
