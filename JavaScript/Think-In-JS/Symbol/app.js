@@ -11,3 +11,14 @@ const person = {
 }
 
 console.log(person);
+
+const person2 = {
+	name: 'Tuar',
+	email: 'tusar@gmail.com'
+}
+person2[Symbol("password")] = 'secret'
+for (const key in person2) {
+	console.log(key);
+}
+
+console.log(Object.keys(person2));
