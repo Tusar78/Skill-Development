@@ -22,3 +22,10 @@ for (const key in person2) {
 }
 
 console.log(Object.keys(person2));
+
+console.log(Array.prototype);
+
+const myArray = [1, 2, 3];
+const myStr = 'Tusar';
+console.log(myArray.includes(1));
+console.log(myStr.includes('u'));
