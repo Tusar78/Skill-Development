@@ -29,3 +29,18 @@ const myArray = [1, 2, 3];
 const myStr = 'Tusar';
 console.log(myArray.includes(1));
 console.log(myStr.includes('u'));
+
+class Product {
+	constructor(title) {
+		this.title = title;
+	}
+
+	[Symbol.search](string) {
+		return string.indexOf(this.title) >= 0 ? "Found" : "Not Found";
+	}
+}
+
+const laptop = new Product("Laptop");
+console.log("Lenovo Laptop".search(laptop));
+
+console.log();
