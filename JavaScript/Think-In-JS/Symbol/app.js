@@ -44,3 +44,6 @@ const laptop = new Product("Laptop");
 console.log("Lenovo Laptop".search(laptop));
 
 console.log();
+
+const mySmb = Symbol("Hello World");
+console.log(mySmb.description); 
