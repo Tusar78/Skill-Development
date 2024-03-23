@@ -11,27 +11,41 @@ var cars = ["Volvo", "BMW", "Audi", "Chevrolet"];
 // }
 
 // Array travers usinf forEach
-cars.forEach((val, i, arr) => {
-  console.log(val, i, arr);
-});
+// cars.forEach((val, i, arr) => {
+//   console.log(val, i, arr);
+// });
 
-// Lets Implement to myForeach
-function myForeach(arr, cb) {
-  for (let i = 0; i < arr.length; i++) {
-    cb(arr[i], i, arr);
-  }
+// // Lets Implement to myForeach
+// function myForeach(arr, cb) {
+//   for (let i = 0; i < arr.length; i++) {
+//     cb(arr[i], i, arr);
+//   }
+// }
+
+// myForeach(cars, (val, i, arr) => {
+//     console.log(val, i, arr);
+// })
+
+
+// const nums = [2, 4, 6, 8];
+// let sum = 1;
+
+// myForeach(nums, (val) => {
+//     sum *= val;
+// })
+
+// console.log(sum);
+
+Array.prototype.myForeach = function(cb) {
+    for (let i = 0; i < this.length; i++) {
+        cb(this[i], i, this);
+      }
 }
 
-myForeach(cars, (val, i, arr) => {
+cars.myForeach((val, i, arr) => {
+console.log(val, i, arr);
+})
+
+cars.forEach((val, i, arr) => {
     console.log(val, i, arr);
 })
-
-
-const nums = [2, 4, 6, 8];
-let sum = 1;
-
-myForeach(nums, (val) => {
-    sum *= val;
-})
-
-console.log(sum);
