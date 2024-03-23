@@ -27,7 +27,7 @@ var cars = ["Volvo", "BMW", "Audi", "Chevrolet"];
 // })
 
 
-// const nums = [2, 4, 6, 8];
+const nums = [2, 4, 6, 8];
 // let sum = 1;
 
 // myForeach(nums, (val) => {
@@ -42,10 +42,15 @@ Array.prototype.myForeach = function(cb) {
       }
 }
 
-cars.myForeach((val, i, arr) => {
-console.log(val, i, arr);
-})
+// cars.myForeach((val, i, arr) => {
+// console.log(val, i, arr);
+// })
 
-cars.forEach((val, i, arr) => {
-    console.log(val, i, arr);
+// cars.forEach((val, i, arr) => {
+//     console.log(val, i, arr);
+// })
+
+nums.myForeach((val, i, arr) => {
+    arr[i] = val + 5;
 })
+console.log(nums);
