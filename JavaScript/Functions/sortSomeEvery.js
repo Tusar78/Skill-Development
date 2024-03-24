@@ -33,3 +33,22 @@ nums.sort((a, b) => {
     return b - a;
 });
 console.log(nums);
+
+// Implement Some Method 
+function mySome(arr, cb) {
+    let newVal = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (cb(arr[i])) {
+            newVal = true;
+            break;
+        }
+    }
+
+    return newVal;
+}
+
+const isSeven = mySome(nums, (val) => {
+    return val === 77;
+})
+
+console.log(isSeven);
