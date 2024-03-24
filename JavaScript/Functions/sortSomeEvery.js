@@ -21,7 +21,7 @@ const data = [
     }
 ]
 
-const nums = [4, 6, 7, 9, 54, 7, 6, 37, -8, -2, 0, 8, 66];
+const nums = [4, 6, 7, 9, 54, 7, 6, 37];
 
 // Apply Sort method
 data.sort((a, b) => {
@@ -34,21 +34,26 @@ nums.sort((a, b) => {
 });
 console.log(nums);
 
+
+const n1 = [2, 2, 3, 2]
 // Implement Some Method 
-function mySome(arr, cb) {
-    let newVal = false;
+function myEvery(arr, cb) {
+    let newVal = 0;
     for (let i = 0; i < arr.length; i++) {
         if (cb(arr[i])) {
-            newVal = true;
-            break;
+            newVal += 1;
         }
     }
 
-    return newVal;
+    if (newVal === arr.length) {
+        return newVal = true;
+    } else {
+        return newVal = false;
+    }
 }
 
-const isSeven = mySome(nums, (val) => {
-    return val === 77;
+const isPositive = myEvery(nums, (val) => {
+    return val > 0;
 })
 
-console.log(isSeven);
+console.log(isPositive);
