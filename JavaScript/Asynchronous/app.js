@@ -24,30 +24,55 @@
 // xhr.send();
 // console.log('Tusar');
 
+// function getRequest(url, cb) {
+//     const xhr = new XMLHttpRequest();
+//     xhr.open('get', url);
+
+//     xhr.onreadystatechange = function (e) {
+//         if (xhr.readyState === 4) {
+//             if (xhr.status === 200) {
+//                 let response = JSON.parse(xhr.response);
+//                 cb(null, response);
+//             } else {
+//                 cb(xhr.status, null);
+//             }
+//         }
+//     }
+    
+//     xhr.send();
+// }
+
+// getRequest('https://jsonplaceholder.typicode.com/users', (err, res) => {
+//     if (err) {
+//         console.log(err);
+//     } else {
+//         res.forEach(element => {
+//           console.log(element.username);
+//         });
+//     }
+// })
+
 function getRequest(url, cb) {
     const xhr = new XMLHttpRequest();
     xhr.open('get', url);
-
-    xhr.onreadystatechange = function (e) {
+    xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                let response = JSON.parse(xhr.response);
+                const response = JSON.parse(xhr.response);
                 cb(null, response);
             } else {
-                cb(xhr.status, null);
-            }
+                cb(xhr.status, this.response);
+            }   
         }
     }
-    
+
     xhr.send();
 }
 
-getRequest('https://jsonplaceholder.typicode.com/users', (err, res) => {
+const output = getRequest('https://jsonplaceholder.typicode.com/posts', (err, res) => {
     if (err) {
         console.log(err);
     } else {
-        res.forEach(element => {
-          console.log(element.username);
-        });
+        console.log(res);
     }
 })
