@@ -1,0 +1,226 @@
+//package cgpa;
+//
+//import java.util.Scanner;
+//import java.util.HashMap;
+//
+//class calculateAndStore {
+//    HashMap <String, Double> studentMap = new HashMap<>();
+//
+//    void store(String name, double gpa) {
+//        studentMap.put(name, gpa);
+//    }
+//
+//    double calculator(String name) {
+//        Double totalGPA = studentMap.get(name);
+//        return totalGPA / 3;
+//    }
+//}
+//
+//class gradeConvert {
+//    private String grade;
+//
+//    gradeConvert(String grade) {
+//        this.grade = grade;
+//    }
+//
+//    double convertGradeToGPA() {
+//        switch (grade) {
+//            case "A+":
+//            case "A":
+//                return 4.0;
+//            case "A-":
+//                return 3.7;
+//            case "B+":
+//                return 3.3;
+//            case "B":
+//                return 3.0;
+//            case "B-":
+//                return 2.7;
+//            case "C+":
+//                return 2.3;
+//            case "C":
+//                return 2.0;
+//            case "C-":
+//                return 1.7;
+//            case "D+":
+//                return 1.3;
+//            case "D":
+//                return 1.0;
+//            case "F":
+//                return 0.0;
+//            default:
+//                return -1.0;
+//        }
+//    }
+//
+//}
+//
+//public class CGPA {
+//    public static void main(String[] args) {
+//        Scanner inputScanner = new Scanner(System.in);
+//        calculateAndStore objAndStore = new calculateAndStore();
+//
+//        do {
+//            int studentId;
+//            String firstName, lastName, grade1, grade2, grade3;
+//            double gpa1 = 0, gpa2 = 0, gpa3 = 0;
+//
+//            System.out.println("Enter your student ID: ");
+//            studentId = inputScanner.nextInt();
+//
+//            inputScanner.nextLine();
+//
+//            System.out.println("Enter your First name: ");
+//            firstName = inputScanner.nextLine();
+//
+//            System.out.println("Enter your Last name: ");
+//            lastName = inputScanner.nextLine();
+//
+//            System.out.println("Enter your Grade in CSE11: ");
+//            grade1 = inputScanner.nextLine();
+//            
+//            gradeConvert gradeConvert1 = new gradeConvert(grade1);
+//            gpa1 = gradeConvert1.convertGradeToGPA();
+//
+//            System.out.println("Enter your Grade in CSE21: ");
+//            grade2 = inputScanner.nextLine();
+//            
+//            gradeConvert gradeConvert2 = new gradeConvert(grade2);
+//            gpa2 = gradeConvert2.convertGradeToGPA();
+//
+//            System.out.println("Enter your Grade in CSE31: ");
+//            grade3 = inputScanner.nextLine();
+//            
+//            gradeConvert gradeConvert3 = new gradeConvert(grade3);
+//            gpa3 = gradeConvert3.convertGradeToGPA();
+//
+//            objAndStore.store(firstName, gpa1 + gpa2 + gpa3);
+//
+//            System.out.println("Press 1 to enter info for another student, or any other key to exit: ");
+//        } while (inputScanner.next().equals("1"));
+//
+//        inputScanner.nextLine();
+//
+//        System.out.println("Enter the name of the student to view their CGPA: ");
+//        String studentName = inputScanner.nextLine();
+//        double studentCGPA = objAndStore.calculator(studentName);
+//
+//        if (studentCGPA != -1.0) {
+//            System.out.println("CGPA for " + studentName + " is: " + studentCGPA);
+//        } else {
+//            System.out.println("Student not found.");
+//        }
+//    }
+//}
+
+package cgpa;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+class Student {
+    String firstName;
+    String lastName;
+    int studentId;
+    double gpa1;
+    double gpa2;
+    double gpa3;
+
+    Student(int studentId, String firstName, String lastName, double gpa1, double gpa2, double gpa3) {
+        this.studentId = studentId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gpa1 = gpa1;
+        this.gpa2 = gpa2;
+        this.gpa3 = gpa3;
+    }
+
+    double calculateCGPA() {
+        return (gpa1 + gpa2 + gpa3) / 3.0;
+    }
+}
+
+class GradeConverter {
+    public static double convertGradeToGPA(String grade) {
+        switch (grade.toUpperCase()) { // Ensure case-insensitivity
+            case "A+":
+            case "A":
+                return 4.0;
+            case "A-":
+                return 3.7;
+            case "B+":
+                return 3.3;
+            case "B":
+                return 3.0;
+            case "B-":
+                return 2.7;
+            case "C+":
+                return 2.3;
+            case "C":
+                return 2.0;
+            case "C-":
+                return 1.7;
+            case "D+":
+                return 1.3;
+            case "D":
+                return 1.0;
+            case "F":
+                return 0.0;
+            default:
+                return -1.0; // Invalid grade
+        }
+    }
+}
+
+public class CGPA {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        HashMap<Integer, Student> students = new HashMap<>();
+
+        while (true) {
+            System.out.println("Enter your student ID: ");
+            int studentId = scanner.nextInt();
+
+            scanner.nextLine(); // Consume the newline character
+
+            System.out.println("Enter your first name: ");
+            String firstName = scanner.nextLine();
+
+            System.out.println("Enter your last name: ");
+            String lastName = scanner.nextLine();
+
+            System.out.println("Enter your grade in CSE11: ");
+            String grade1 = scanner.nextLine();
+            double gpa1 = GradeConverter.convertGradeToGPA(grade1);
+
+            System.out.println("Enter your grade in CSE21: ");
+            String grade2 = scanner.nextLine();
+            double gpa2 = GradeConverter.convertGradeToGPA(grade2);
+
+            System.out.println("Enter your grade in CSE31: ");
+            String grade3 = scanner.nextLine();
+            double gpa3 = GradeConverter.convertGradeToGPA(grade3);
+
+            Student student = new Student(studentId, firstName, lastName, gpa1, gpa2, gpa3);
+            students.put(studentId, student);
+
+            System.out.println("Press 1 to enter info for another student, or any other key to exit: ");
+            if (!scanner.next().equals("1")) {
+                break;
+            }
+            scanner.nextLine(); // Consume the newline character
+        }
+
+        System.out.println("Enter the student ID to view their CGPA: ");
+        int queryId = scanner.nextInt();
+
+        Student queryStudent = students.get(queryId);
+        if (queryStudent != null) {
+            System.out.println("CGPA for " + queryStudent.firstName + " " + queryStudent.lastName + " is: " + queryStudent.calculateCGPA());
+        } else {
+            System.out.println("Student not found.");
+        }
+
+        scanner.close();
+    }
+}
