@@ -13,20 +13,6 @@ const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thurday", "Friday"];
 
 // Date Object
 const DATE = new Date();
-// console.log(days[date.getDay()]);
-
-// setTimeout(() => {
-//   console.log(date.getHours() - 12);
-//   console.log(date.getMinutes());
-//   console.log(date.getSeconds());
-// }, 1000);
-
-setInterval(() => {
-//   const date = new Date();
-//   console.log(date.getHours() - 12);
-//   console.log(date.getMinutes());
-//   console.log(date.getSeconds());
-}, 1000);
 
 // Day Function
 const dayGenerate = (days, dateObj) => {
