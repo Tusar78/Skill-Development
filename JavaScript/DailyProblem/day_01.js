@@ -84,3 +84,56 @@ function findMax(arr) {
 
 const result2 = findMax([1, 2, 3, 4, 5]);
 console.log(result2);
+
+/*
+Problem 3: Reverse a String
+Write a function named reverseString that takes a string as input and returns the string in reverse order.
+
+Conditions
+1. The function should be named reverseString.
+2. It should accept a single parameter (the string).
+3. It should return the string reversed.
+
+Examples
+reverseString("hello"); // Output: "olleh"
+reverseString("JavaScript"); // Output: "tpircSavaJ"
+reverseString("12345"); // Output: "54321"
+*/
+
+
+// Solution 01
+function reverseString(str) {    
+    if (!str) return null;
+    let reverseStr = '';
+    for (let i = str.length; i > 0; i--) {
+        reverseStr += str[i-1];
+    }
+
+    return reverseStr;
+    
+}
+
+const result5 = reverseString("");
+console.log(result5);
+
+
+// Solution 02
+function reverseString(str) {
+    if (!str) return null;
+    let reverseStr = str.split("").reverse().join("");
+    return reverseStr;
+}
+
+// const result2 = reverseString("JavaScript");
+// console.log(result2);
+
+
+// Solution 03
+function reverseString(str) {
+    if (typeof str !== 'string' || !str) return null;
+    let reverseStr = [...str].reverse().join("");
+    return reverseStr;
+}
+
+const result3 = reverseString("Hello");
+console.log(result3);
