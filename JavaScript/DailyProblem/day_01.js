@@ -23,17 +23,64 @@ getEvenNumbers([13, 18, 27, 42]);   // Output: [18, 42]
 // const result = getEvenNumbers([13, 18, 27, 42]);
 // console.log(result);
 
-function getEvenNumbers(arr) {
-    const newArray = [];
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0) {
-            newArray.push(arr[i]);
+// function getEvenNumbers(arr) {
+//     const newArray = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 == 0) {
+//             newArray.push(arr[i]);
+//         }
+//     }
+
+//     return newArray;
+// }
+
+
+// const result = getEvenNumbers([1, 2, 3, 4, 5, 6]);
+// console.log(result);
+
+
+/*
+
+Problem 2: Find the Maximum Number
+
+Write a function named findMax that takes an array of numbers as input and returns the largest number in the array.
+
+Conditions
+---------
+1. The function should be named findMax.
+2. It should accept a single parameter (the array).
+3. It should return the maximum number in the array.
+
+Examples
+findMax([1, 2, 3, 4, 5]); // Output: 5
+findMax([23, 56, 12, 78, 34]); // Output: 78
+findMax([-5, -2, -8, -1]); // Output: -1
+
+Hints (Optional)
+You can use a loop or modern JavaScript methods like Math.max with the spread operator.
+*/
+
+// Solution 01
+function findMax(arr) {
+    let maxNum = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (maxNum < arr[i]) {
+            maxNum = arr[i];
         }
     }
+    
+    return maxNum;
+}
+const result1 = findMax([-5, -2, -8, -1]);
+console.log(result1);
 
-    return newArray;
+
+// Solution 02
+function findMax(arr) {
+    if (arr.length === 0) return null;
+    let maxNum = Math.max(...arr);
+    return maxNum;
 }
 
-
-const result = getEvenNumbers([1, 2, 3, 4, 5, 6]);
-console.log(result);
+const result2 = findMax([1, 2, 3, 4, 5]);
+console.log(result2);
