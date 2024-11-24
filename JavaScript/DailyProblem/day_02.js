@@ -28,14 +28,56 @@ removeDuplicates([5, 5, 5, 5]); // Output: [5]
 // const result4 = removeDuplicates(["a", "b", "a", "c", "d", "b"]);
 // console.log(result4);
 
-const removeDuplicates = arr => {
-    if (arr.length === 0) return [];
-    
-    let uniqueArray = arr.filter((item, index) => arr.indexOf(item) === index)
-    return uniqueArray;
-}
+// const removeDuplicates = arr => {
+//     if (arr.length === 0) return [];
 
-const result4 = removeDuplicates(["a", "b", "a", "c", "d", "b"]);
-console.log(result4);
+//     let uniqueArray = arr.filter((item, index) => arr.indexOf(item) === index)
+//     return uniqueArray;
+// }
 
+// const result4 = removeDuplicates(["a", "b", "a", "c", "d", "b"]);
+// console.log(result4);
 
+/*
+
+Problem 5: Count the Occurrences of Elements in an Array
+-----------------
+Write a function named countOccurrences that takes an array as input and returns an object. The object should have each unique element of the array as a key, and the number of times it occurs as the value.
+
+Conditions
+----------
+    1. The function should be named countOccurrences.
+    2. It should accept a single parameter (the array).
+    3. It should return an object with the count of each element.
+
+Examples
+--------
+    countOccurrences([1, 2, 3, 2, 1, 5, 1]); 
+    // Output: { 1: 3, 2: 2, 3: 1, 5: 1 }
+
+    countOccurrences(["a", "b", "a", "c", "d", "b", "a"]); 
+    // Output: { a: 3, b: 2, c: 1, d: 1 }
+
+    countOccurrences([]); 
+    // Output: {}
+*/
+
+const countOccurrences = (arr) => {
+  if (arr.length === 0) return {};
+
+  const count = {};
+  for (const elem of arr) {
+    // if (!count[elem]) {
+    //   count[elem] = 1;
+    // } else {
+    //   count[elem] += 1;
+    // }
+
+    count[elem] = count[elem] ? count[elem] + 1 : 1
+  }
+
+  return count;
+};
+
+const result5 = countOccurrences(["a", "b", "a", "c", "d", "b", "a"]);
+console.log(result5);
