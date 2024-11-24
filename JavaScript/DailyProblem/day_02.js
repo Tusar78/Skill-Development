@@ -81,3 +81,31 @@ const countOccurrences = (arr) => {
 
 const result5 = countOccurrences(["a", "b", "a", "c", "d", "b", "a"]);
 console.log(result5);
+
+
+/**
+Problem 6: Check if a String is a Palindrome
+---
+Write a function named isPalindrome that checks whether a given string is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward (ignoring case and non-alphanumeric characters).
+
+Conditions
+----
+    1. The function should take one string as input.
+    2. It should return true if the string is a palindrome and false otherwise.
+    3. Ignore spaces, punctuation, and capitalization when checking for palindromes.
+
+Examples
+-------
+    isPalindrome("madam"); 
+    // Output: true
+
+    isPalindrome("racecar"); 
+    // Output: true
+
+    isPalindrome("Hello"); 
+    // Output: false
+
+    isPalindrome("A man, a plan, a canal: Panama"); 
+    // Output: true
+
+ */
