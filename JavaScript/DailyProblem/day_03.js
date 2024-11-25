@@ -86,3 +86,49 @@ const findFactorial = n => {
 
 const result8 = findFactorial(5);
 console.log(result8);
+
+
+/**
+Problem 9: Find the Intersection of Two Arrays
+Write a function named findIntersection that takes two arrays as input and returns a new array containing the common elements between the two arrays.
+
+Conditions
+----------
+    1. The result array should contain unique elements only.
+    2. If there are no common elements, return an empty array.
+
+Examples
+--------
+    findIntersection([1, 2, 3, 4], [3, 4, 5, 6]); 
+    // Output: [3, 4]
+
+    findIntersection([7, 8, 9], [10, 11, 12]); 
+    // Output: []
+
+    findIntersection(['a', 'b', 'c'], ['b', 'c', 'd']); 
+    // Output: ['b', 'c']
+
+ */
+
+const findIntersection = (arr1, arr2) => {
+    if(arr1.length === 0 || arr2.length === 0) return [];
+
+    // Remove Duplication
+    arr1 = [...new Set(arr1)];
+    arr2 = [...new Set(arr2)];
+
+    // Find Intersection from two Arrays
+    const newArray = [];
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                newArray.push(arr1[i]);
+            }
+        }
+    }
+   
+    return newArray;
+}
+
+const result9 = findIntersection(['a', 'b', 'c'], ['b', 'c', 'd']);
+console.log(result9);
