@@ -110,24 +110,38 @@ Examples
 
  */
 
-const findIntersection = (arr1, arr2) => {
-    if(arr1.length === 0 || arr2.length === 0) return [];
+// const findIntersection = (arr1, arr2) => {
+//     if(arr1.length === 0 || arr2.length === 0) return [];
 
-    // Remove Duplication
-    arr1 = [...new Set(arr1)];
-    arr2 = [...new Set(arr2)];
+//     // Remove Duplication
+//     arr1 = [...new Set(arr1)];
+//     arr2 = [...new Set(arr2)];
 
-    // Find Intersection from two Arrays
-    const newArray = [];
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr1[i] == arr2[j]) {
-                newArray.push(arr1[i]);
-            }
-        }
-    }
+//     // Find Intersection from two Arrays
+//     const newArray = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         for (let j = 0; j < arr2.length; j++) {
+//             if (arr1[i] == arr2[j]) {
+//                 newArray.push(arr1[i]);
+//             }
+//         }
+//     }
    
-    return newArray;
+//     return newArray;
+// }
+
+// Refine 
+const findIntersection = (arr1, arr2) => {
+    // Edge Case
+    if (arr1.length === 0 || arr2.length === 0) return [];
+
+    // Convert one array to a set for faster lookup
+    const set2 = new Set(arr2);
+
+    // Filter elements in arr1 that exits in set2
+    const result = arr1.filter(item => set2.has(item));
+    
+    return [...new Set(result)];
 }
 
 const result9 = findIntersection(['a', 'b', 'c'], ['b', 'c', 'd']);
