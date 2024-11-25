@@ -109,3 +109,20 @@ Examples
     // Output: true
 
  */
+
+const isPalindrome = str => {
+    // Edge case Check
+    if (typeof str !== 'string' || !str) return false;
+    
+    // Remove all non-alphanumeric character and lowercase also
+    str = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+
+    // Make string reverse 
+    const reverseStr = [...str].reverse().join('');
+
+    // Make Palindrome Condition
+    return str === reverseStr;
+} 
+
+const result6 = isPalindrome("A man, a plan, a canal: Panama");
+console.log(result6);
