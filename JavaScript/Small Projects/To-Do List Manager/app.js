@@ -46,40 +46,80 @@ Allow the user to filter tasks (e.g., show only "Completed" tasks).
 */
 
 // Store task
-let taskList = [
-    {id: 1, description: 'Learn JS', completed: false},
-    {id: 2, description: 'Learn React', completed: false},
-    {id: 3, description: 'Learn PHP', completed: false}
-];
+let taskList = [];
 
 // New Task Added
 const addTask = (desc) => {
-  if (taskList.length > 0) {
-    const lastTask = taskList[taskList.length - 1];
-    const newTask = {
-      id: lastTask.id + 1,
-      description: desc,
-      completed: false,
-    };
-    taskList.push(newTask);
+  if (desc.length < 1) {
+    console.log(`Task Description cannot be empty!`);
   } else {
-    const newTask = {
-      id: 1,
-      description: desc,
-      completed: false,
-    };
-    taskList.push(newTask);
+    if (taskList.length > 0) {
+      const lastTask = taskList[taskList.length - 1];
+      const newTask = {
+        id: lastTask.id + 1,
+        description: desc,
+        completed: false,
+      };
+      taskList.push(newTask);
+    } else {
+      const newTask = {
+        id: 1,
+        description: desc,
+        completed: false,
+      };
+      taskList.push(newTask);
+    }
   }
-}; 
-
+};
 
 // Marks a task as complete by its id
-const markAsCompleted = id => {
-    const existingTask = taskList.filter(task => task.id !== id);
-    const getCompleteTask = taskList.find(task => task.id == id);
-    getCompleteTask.completed = true
-    existingTask.push(getCompleteTask)
-    existingTask.sort((a, b) => a.id - b.id)
-    taskList = existingTask;
-}
+const markAsCompleted = (id) => {
+  if (id) {
+    const existingTask = taskList.filter((task) => task.id !== id);
+    const getCompleteTask = taskList.find((task) => task.id == id);
+    if (getCompleteTask) {
+      getCompleteTask.completed = true;
+      existingTask.push(getCompleteTask);
+      existingTask.sort((a, b) => a.id - b.id);
+      taskList = existingTask;
+    } else {
+      console.log(`Task with ID ${id} does not exist.`);
+    }
+  } else {
+    console.log("Mark as completed id can not be empty");
+  }
+};
 
+// Delets a task by id
+const deleteTask = (id) => {
+  if (id) {
+    const matchId = taskList.find((task) => task.id === id);
+    if (matchId) {
+      const newTask = taskList.filter((task) => task.id !== id);
+      taskList = newTask.sort((a, b) => a.id - b.id);
+    } else {
+      console.log(`Task with ID ${id} does not exist.`);
+    }
+  } else {
+    console.log("Delete id can not be empty");
+  }
+};
+
+// View Task
+const viewTasks = () => {
+  if (taskList.length > 0) {
+    for (const task of taskList) {
+      console.log(
+        `${task.id}. ${task.description} - ${
+          task.completed ? "Completed" : "Pending"
+        }`
+      );
+    }
+  } else {
+    console.log("There have no any task!");
+  }
+};
+
+// addTask("Learn JavaScript")
+// addTask("Solve 10 problems")
+// addTask("Make Small Projects")
