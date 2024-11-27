@@ -120,6 +120,34 @@ const viewTasks = () => {
   }
 };
 
-// addTask("Learn JavaScript")
-// addTask("Solve 10 problems")
-// addTask("Make Small Projects")
+// Bonus Part
+const filterTasks = (status) => {
+  if (!status) {
+    console.log("Status is required");
+  } else {
+    status = status.toLowerCase();
+    if (status === "completed") {
+      status = true;
+    } else if (status === "pending") {
+      status = false;
+    } else {
+      console.log("Please enter valid Filtering text");
+    }
+    const statusComplete = taskList.filter((task) => task.completed === status);
+    console.log(statusComplete);
+    for (const statusItem of statusComplete) {
+      console.log(
+        `${statusItem.id}. ${statusItem.description} - ${
+          statusItem.completed ? "Completed" : "Pending"
+        }`
+      );
+    }
+  }
+};
+
+addTask("Learn JavaScript");
+addTask("Solve 10 problems");
+addTask("Make Small Projects");
+addTask("Learn Python");
+addTask("Learn PHP");
+addTask("Learn Java");
