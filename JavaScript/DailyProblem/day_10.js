@@ -43,3 +43,10 @@ const convertFahrenheitToCelsius = f => {
 
 const Celsius = convertFahrenheitToCelsius('fg')
 console.log(Celsius);
+
+let a = 10;
+let b = 20;
+console.log(a, b);
+
+[b, a] = [a, b]
+console.log(a, b);
