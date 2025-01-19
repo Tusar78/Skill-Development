@@ -91,25 +91,46 @@ Return false if the number is not a prime number.
 If the input is not a positive integer greater than 1, return "Invalid input".
 */
 
-const isPrime = (num) => {
+// const isPrime = (num) => {
+//   // Edge case
+//   if (typeof num !== "number" || num < 1) {
+//     return "Invalid input, Please Provide a valid number";
+//   }
+
+//   // Base Case
+//   let count = 0;
+//   if (num === 1) {
+//     count = 1;
+//   }
+//   for (let i = 2; i <= num / 2; i++) {
+//     if (num % i === 0) {
+//       count++;
+//     }
+//   }
+
+//   return count === 0 ? true : false;
+// };
+
+// const result = isPrime(7);
+// console.log(result);
+
+// Another way
+const isPrime = (n) => {
   // Edge case
-  if (typeof num !== "number" || num < 1) {
+  if (typeof n !== "number" || n < 1) {
     return "Invalid input, Please Provide a valid number";
   }
 
   // Base Case
-  let count = 0;
-  if (num === 1) {
-    count = 1;
-  }
-  for (let i = 2; i <= num / 2; i++) {
-    if (num % i === 0) {
-      count++;
-    }
+  if (n === 1) return false;
+  if (n === 2) return true;
+
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) return false;
   }
 
-  return count === 0 ? true : false;
+  return true;
 };
 
-const result = isPrime(9);
+const result = isPrime(14);
 console.log(result);
